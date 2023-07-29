@@ -10,6 +10,7 @@ namespace DataAccess
     {
         public int Consulta_ID { get; set; }
         public int Medico_ID { get; set; }
+        public int Paciente_ID { get; set; }
         public DateTime Fecha { get; set; }
         public string Dia_de_Semana { get; set; }
         public TimeOnly Hora_inicio { get; set; }
