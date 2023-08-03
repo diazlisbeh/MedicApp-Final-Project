@@ -2,19 +2,6 @@
   "version": 3,
   "targets": {
     "net7.0": {
-      "Humanizer.Core/2.14.1": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/_._": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Humanizer.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Data.Sqlite.Core/7.0.9": {
         "type": "package",
         "dependencies": {
@@ -76,28 +63,6 @@
           "lib/netstandard2.0/_._": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Design/7.0.9": {
-        "type": "package",
-        "dependencies": {
-          "Humanizer.Core": "2.14.1",
-          "Microsoft.EntityFrameworkCore.Relational": "7.0.9",
-          "Microsoft.Extensions.DependencyModel": "7.0.0",
-          "Mono.TextTemplating": "2.2.1"
-        },
-        "compile": {
-          "lib/net6.0/_._": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Microsoft.EntityFrameworkCore.Design.dll": {
-            "related": ".xml"
-          }
-        },
-        "build": {
-          "build/net6.0/Microsoft.EntityFrameworkCore.Design.props": {}
-        }
-      },
       "Microsoft.EntityFrameworkCore.Relational/7.0.9": {
         "type": "package",
         "dependencies": {
@@ -131,18 +96,6 @@
           "lib/net6.0/Microsoft.EntityFrameworkCore.Sqlite.dll": {
             "related": ".xml"
           }
-        }
-      },
-      "Microsoft.EntityFrameworkCore.Tools/7.0.9": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "7.0.9"
-        },
-        "compile": {
-          "lib/net6.0/_._": {}
-        },
-        "runtime": {
-          "lib/net6.0/_._": {}
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/7.0.0": {
@@ -335,18 +288,6 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "Mono.TextTemplating/2.2.1": {
-        "type": "package",
-        "dependencies": {
-          "System.CodeDom": "4.4.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/_._": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Mono.TextTemplating.dll": {}
-        }
-      },
       "SQLitePCLRaw.core/2.1.4": {
         "type": "package",
         "dependencies": {
@@ -357,17 +298,6 @@
         },
         "runtime": {
           "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
-        }
-      },
-      "System.CodeDom/4.4.0": {
-        "type": "package",
-        "compile": {
-          "ref/netstandard2.0/_._": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.CodeDom.dll": {}
         }
       },
       "System.Memory/4.5.3": {
@@ -419,28 +349,24 @@
         "build": {
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
+      },
+      "DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.9",
+          "Microsoft.EntityFrameworkCore.Sqlite.Core": "7.0.9"
+        },
+        "compile": {
+          "bin/placeholder/DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataAccess.dll": {}
+        }
       }
     }
   },
   "libraries": {
-    "Humanizer.Core/2.14.1": {
-      "sha512": "lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
-      "type": "package",
-      "path": "humanizer.core/2.14.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "humanizer.core.2.14.1.nupkg.sha512",
-        "humanizer.core.nuspec",
-        "lib/net6.0/Humanizer.dll",
-        "lib/net6.0/Humanizer.xml",
-        "lib/netstandard1.0/Humanizer.dll",
-        "lib/netstandard1.0/Humanizer.xml",
-        "lib/netstandard2.0/Humanizer.dll",
-        "lib/netstandard2.0/Humanizer.xml",
-        "logo.png"
-      ]
-    },
     "Microsoft.Data.Sqlite.Core/7.0.9": {
       "sha512": "ow2PPoeW0yFc7NhexacQUw/LVjkO1mLK3VZAxhVIVjmQWlgYl/4mo9/U7uz+z75I+ZN6LUvq9M0ftU3IE75Ilg==",
       "type": "package",
@@ -500,21 +426,6 @@
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Design/7.0.9": {
-      "sha512": "tWsa+spzKZAwHrUP6vYM1LLh0P89UMcldEjerFPPZb0LcI/ONQmh7ldK4Q8TeRuIiuXxYgRYPElSgxwLp14oug==",
-      "type": "package",
-      "path": "microsoft.entityframeworkcore.design/7.0.9",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "build/net6.0/Microsoft.EntityFrameworkCore.Design.props",
-        "lib/net6.0/Microsoft.EntityFrameworkCore.Design.dll",
-        "lib/net6.0/Microsoft.EntityFrameworkCore.Design.xml",
-        "microsoft.entityframeworkcore.design.7.0.9.nupkg.sha512",
-        "microsoft.entityframeworkcore.design.nuspec"
-      ]
-    },
     "Microsoft.EntityFrameworkCore.Relational/7.0.9": {
       "sha512": "u7iN6cNd6SJUlpdk24JVIbkji/UbkEEQ7pXncTyT4eXXj+Hz2y4NSZFOAywPGcioIgX1YzbKWDiJhk7hjSFxBQ==",
       "type": "package",
@@ -541,31 +452,6 @@
         "lib/net6.0/Microsoft.EntityFrameworkCore.Sqlite.xml",
         "microsoft.entityframeworkcore.sqlite.core.7.0.9.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlite.core.nuspec"
-      ]
-    },
-    "Microsoft.EntityFrameworkCore.Tools/7.0.9": {
-      "sha512": "GWOSIe8ltR/mqv2wpRvMhy6ULapdKhZXXpXSGWzG1fRxhYXjSGpe2Pqhxqo46o9RDGlk0WJUXrwyU+N4voPxMw==",
-      "type": "package",
-      "path": "microsoft.entityframeworkcore.tools/7.0.9",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "lib/net6.0/_._",
-        "microsoft.entityframeworkcore.tools.7.0.9.nupkg.sha512",
-        "microsoft.entityframeworkcore.tools.nuspec",
-        "tools/EntityFrameworkCore.PS2.psd1",
-        "tools/EntityFrameworkCore.PS2.psm1",
-        "tools/EntityFrameworkCore.psd1",
-        "tools/EntityFrameworkCore.psm1",
-        "tools/about_EntityFrameworkCore.help.txt",
-        "tools/init.ps1",
-        "tools/net461/any/ef.exe",
-        "tools/net461/win-arm64/ef.exe",
-        "tools/net461/win-x86/ef.exe",
-        "tools/netcoreapp2.0/any/ef.dll",
-        "tools/netcoreapp2.0/any/ef.runtimeconfig.json"
       ]
     },
     "Microsoft.Extensions.Caching.Abstractions/7.0.0": {
@@ -890,19 +776,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "Mono.TextTemplating/2.2.1": {
-      "sha512": "KZYeKBET/2Z0gY1WlTAK7+RHTl7GSbtvTLDXEZZojUdAPqpQNDL6tHv7VUpqfX5VEOh+uRGKaZXkuD253nEOBQ==",
-      "type": "package",
-      "path": "mono.texttemplating/2.2.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net472/Mono.TextTemplating.dll",
-        "lib/netstandard2.0/Mono.TextTemplating.dll",
-        "mono.texttemplating.2.2.1.nupkg.sha512",
-        "mono.texttemplating.nuspec"
-      ]
-    },
     "SQLitePCLRaw.core/2.1.4": {
       "sha512": "inBjvSHo9UDKneGNzfUfDjK08JzlcIhn1+SP5Y3m6cgXpCxXKCJDy6Mka7LpgSV+UZmKSnC8rTwB0SQ0xKu5pA==",
       "type": "package",
@@ -913,27 +786,6 @@
         "lib/netstandard2.0/SQLitePCLRaw.core.dll",
         "sqlitepclraw.core.2.1.4.nupkg.sha512",
         "sqlitepclraw.core.nuspec"
-      ]
-    },
-    "System.CodeDom/4.4.0": {
-      "sha512": "2sCCb7doXEwtYAbqzbF/8UAeDRMNmPaQbU2q50Psg1J9KzumyVVCgKQY8s53WIPTufNT0DpSe9QRvVjOzfDWBA==",
-      "type": "package",
-      "path": "system.codedom/4.4.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/System.CodeDom.dll",
-        "lib/netstandard2.0/System.CodeDom.dll",
-        "ref/net461/System.CodeDom.dll",
-        "ref/net461/System.CodeDom.xml",
-        "ref/netstandard2.0/System.CodeDom.dll",
-        "ref/netstandard2.0/System.CodeDom.xml",
-        "system.codedom.4.4.0.nupkg.sha512",
-        "system.codedom.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
       ]
     },
     "System.Memory/4.5.3": {
@@ -1058,13 +910,16 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../DataAccess/DataAccess.csproj",
+      "msbuildProject": "../DataAccess/DataAccess.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Microsoft.EntityFrameworkCore >= 7.0.9",
-      "Microsoft.EntityFrameworkCore.Sqlite.Core >= 7.0.9",
-      "Microsoft.EntityFrameworkCore.Tools >= 7.0.9"
+      "DataAccess >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1073,11 +928,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lizbe\\Source\\Repos\\MedicApp-Final-Project\\DataAccess\\DataAccess.csproj",
-      "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\lizbe\\Source\\Repos\\MedicApp-Final-Project\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\lizbe\\source\\repos\\MedicApp-Final-Project\\BusinessLogic\\BusinessLogic.csproj",
+      "projectName": "BusinessLogic",
+      "projectPath": "C:\\Users\\lizbe\\source\\repos\\MedicApp-Final-Project\\BusinessLogic\\BusinessLogic.csproj",
       "packagesPath": "C:\\Users\\lizbe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lizbe\\Source\\Repos\\MedicApp-Final-Project\\DataAccess\\obj\\",
+      "outputPath": "C:\\Users\\lizbe\\source\\repos\\MedicApp-Final-Project\\BusinessLogic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lizbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1093,7 +948,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\lizbe\\source\\repos\\MedicApp-Final-Project\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\lizbe\\source\\repos\\MedicApp-Final-Project\\DataAccess\\DataAccess.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -1105,22 +964,6 @@
     "frameworks": {
       "net7.0": {
         "targetAlias": "net7.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": {
-            "target": "Package",
-            "version": "[7.0.9, )"
-          },
-          "Microsoft.EntityFrameworkCore.Sqlite.Core": {
-            "target": "Package",
-            "version": "[7.0.9, )"
-          },
-          "Microsoft.EntityFrameworkCore.Tools": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "[7.0.9, )"
-          }
-        },
         "imports": [
           "net461",
           "net462",
