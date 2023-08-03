@@ -1068,19 +1068,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\force\\.nuget\\packages\\": {}
+    "C:\\Users\\FAILEEN\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\force\\Documents\\Código Fuente\\C#\\MedicApp-Final-Project\\DataAccess\\DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\FAILEEN\\Source\\Repos\\MedicApp-Final-Project\\DataAccess\\DataAccess.csproj",
       "projectName": "DataAccess",
-      "projectPath": "C:\\Users\\force\\Documents\\Código Fuente\\C#\\MedicApp-Final-Project\\DataAccess\\DataAccess.csproj",
-      "packagesPath": "C:\\Users\\force\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\force\\Documents\\Código Fuente\\C#\\MedicApp-Final-Project\\DataAccess\\obj\\",
+      "projectPath": "C:\\Users\\FAILEEN\\Source\\Repos\\MedicApp-Final-Project\\DataAccess\\DataAccess.csproj",
+      "packagesPath": "C:\\Users\\FAILEEN\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\FAILEEN\\Source\\Repos\\MedicApp-Final-Project\\DataAccess\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\force\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\FAILEEN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1137,7 +1142,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }
