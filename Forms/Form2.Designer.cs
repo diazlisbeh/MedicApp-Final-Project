@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
-            textBox7 = new TextBox();
-            label8 = new Label();
-            textBox6 = new TextBox();
-            label7 = new Label();
+            label1 = new Label();
+            textBox1 = new TextBox();
+            label2 = new Label();
+            textBox2 = new TextBox();
+            label3 = new Label();
+            label4 = new Label();
+            textBox3 = new TextBox();
             textBox5 = new TextBox();
             label6 = new Label();
             textBox4 = new TextBox();
             label5 = new Label();
-            textBox3 = new TextBox();
-            label4 = new Label();
-            label3 = new Label();
-            textBox2 = new TextBox();
-            label2 = new Label();
-            textBox1 = new TextBox();
-            label1 = new Label();
+            textBox6 = new TextBox();
+            label7 = new Label();
+            textBox7 = new TextBox();
+            label8 = new Label();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -77,84 +77,71 @@
             panel1.Size = new Size(944, 441);
             panel1.TabIndex = 0;
             // 
-            // button3
+            // label1
             // 
-            button3.FlatAppearance.MouseDownBackColor = Color.Red;
-            button3.FlatAppearance.MouseOverBackColor = Color.Red;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(726, 352);
-            button3.Name = "button3";
-            button3.Size = new Size(86, 33);
-            button3.TabIndex = 23;
-            button3.Text = "Cerrar";
-            button3.UseVisualStyleBackColor = true;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(360, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(198, 21);
+            label1.TabIndex = 0;
+            label1.Text = "REGISTRO DE PACIENTES";
             // 
-            // button2
+            // textBox1
             // 
-            button2.FlatAppearance.MouseDownBackColor = Color.Lime;
-            button2.FlatAppearance.MouseOverBackColor = Color.Lime;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(407, 352);
-            button2.Name = "button2";
-            button2.Size = new Size(86, 33);
-            button2.TabIndex = 22;
-            button2.Text = "Guardar";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click_1;
+            textBox1.Location = new Point(12, 76);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(175, 23);
+            textBox1.TabIndex = 1;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
-            // button1
+            // label2
             // 
-            button1.FlatAppearance.MouseDownBackColor = Color.Red;
-            button1.FlatAppearance.MouseOverBackColor = Color.Red;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(26, 352);
-            button1.Name = "button1";
-            button1.Size = new Size(86, 33);
-            button1.TabIndex = 19;
-            button1.Text = "Cancelar";
-            button1.UseVisualStyleBackColor = true;
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(26, 52);
+            label2.Name = "label2";
+            label2.Size = new Size(68, 21);
+            label2.TabIndex = 2;
+            label2.Text = "Nombre";
             // 
-            // textBox7
+            // textBox2
             // 
-            textBox7.Location = new Point(712, 76);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(100, 23);
-            textBox7.TabIndex = 18;
+            textBox2.Location = new Point(12, 168);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(175, 23);
+            textBox2.TabIndex = 3;
             // 
-            // label8
+            // label3
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.ForeColor = Color.White;
-            label8.Location = new Point(722, 52);
-            label8.Name = "label8";
-            label8.Size = new Size(80, 21);
-            label8.TabIndex = 17;
-            label8.Text = "Medico ID";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(26, 144);
+            label3.Name = "label3";
+            label3.Size = new Size(75, 21);
+            label3.TabIndex = 4;
+            label3.Text = "Direccion";
             // 
-            // textBox6
+            // label4
             // 
-            textBox6.Location = new Point(407, 269);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(100, 23);
-            textBox6.TabIndex = 16;
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(26, 245);
+            label4.Name = "label4";
+            label4.Size = new Size(68, 21);
+            label4.TabIndex = 5;
+            label4.Text = "Telefono";
             // 
-            // label7
+            // textBox3
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.ForeColor = Color.White;
-            label7.Location = new Point(360, 245);
-            label7.Name = "label7";
-            label7.Size = new Size(205, 21);
-            label7.TabIndex = 15;
-            label7.Text = "Numero de seguridad social";
+            textBox3.Location = new Point(12, 269);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(100, 23);
+            textBox3.TabIndex = 6;
             // 
             // textBox5
             // 
@@ -192,71 +179,83 @@
             label5.TabIndex = 11;
             label5.Text = "Codigo postal";
             // 
-            // textBox3
+            // textBox6
             // 
-            textBox3.Location = new Point(12, 269);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 6;
+            textBox6.Location = new Point(407, 269);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(100, 23);
+            textBox6.TabIndex = 16;
             // 
-            // label4
+            // label7
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(26, 245);
-            label4.Name = "label4";
-            label4.Size = new Size(68, 21);
-            label4.TabIndex = 5;
-            label4.Text = "Telefono";
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(360, 245);
+            label7.Name = "label7";
+            label7.Size = new Size(205, 21);
+            label7.TabIndex = 15;
+            label7.Text = "Numero de seguridad social";
             // 
-            // label3
+            // textBox7
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(26, 144);
-            label3.Name = "label3";
-            label3.Size = new Size(75, 21);
-            label3.TabIndex = 4;
-            label3.Text = "Direccion";
+            textBox7.Location = new Point(712, 76);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(100, 23);
+            textBox7.TabIndex = 18;
             // 
-            // textBox2
+            // label8
             // 
-            textBox2.Location = new Point(12, 168);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(175, 23);
-            textBox2.TabIndex = 3;
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(722, 52);
+            label8.Name = "label8";
+            label8.Size = new Size(80, 21);
+            label8.TabIndex = 17;
+            label8.Text = "Medico ID";
             // 
-            // label2
+            // button1
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(26, 52);
-            label2.Name = "label2";
-            label2.Size = new Size(68, 21);
-            label2.TabIndex = 2;
-            label2.Text = "Nombre";
+            button1.FlatAppearance.MouseDownBackColor = Color.Red;
+            button1.FlatAppearance.MouseOverBackColor = Color.Red;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(26, 352);
+            button1.Name = "button1";
+            button1.Size = new Size(86, 33);
+            button1.TabIndex = 19;
+            button1.Text = "Cancelar";
+            button1.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // button2
             // 
-            textBox1.Location = new Point(12, 76);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(175, 23);
-            textBox1.TabIndex = 1;
-            textBox1.TextChanged += textBox1_TextChanged;
+            button2.FlatAppearance.MouseDownBackColor = Color.Lime;
+            button2.FlatAppearance.MouseOverBackColor = Color.Lime;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(407, 352);
+            button2.Name = "button2";
+            button2.Size = new Size(86, 33);
+            button2.TabIndex = 22;
+            button2.Text = "Guardar";
+            button2.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // button3
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(360, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(198, 21);
-            label1.TabIndex = 0;
-            label1.Text = "REGISTRO DE PACIENTES";
+            button3.FlatAppearance.MouseDownBackColor = Color.Red;
+            button3.FlatAppearance.MouseOverBackColor = Color.Red;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(726, 352);
+            button3.Name = "button3";
+            button3.Size = new Size(86, 33);
+            button3.TabIndex = 23;
+            button3.Text = "Cerrar";
+            button3.UseVisualStyleBackColor = true;
             // 
             // Form2
             // 

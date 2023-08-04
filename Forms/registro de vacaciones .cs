@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Forms
 {
-    public partial class RegisCitas : Form
+    public partial class Form4 : Form
     {
-        public RegisCitas()
+        public Form4()
         {
             InitializeComponent();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
