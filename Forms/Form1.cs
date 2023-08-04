@@ -128,17 +128,23 @@ namespace Forms
 
         private void btnClientes_Click(object sender, EventArgs e)
         {
-            OpenFormulary<Form2>();
+            OpenFormulary<Form4>();
         }
 
         private void btnProfesionales_Click(object sender, EventArgs e)
         {
-            OpenFormulary<Form3>();
+            OpenFormulary<Viewdoc>();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenFormulary<FormEmpleados>();
+            OpenFormulary<Viewemplo>();
+
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            OpenFormulary<Citasmed>();
 
         }
 
