@@ -125,6 +125,46 @@ namespace Forms
         {
 
         }
+
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            OpenFormulary<Form2>();
+        }
+
+        private void btnProfesionales_Click(object sender, EventArgs e)
+        {
+            OpenFormulary<Form3>();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenFormulary<FormEmpleados>();
+
+        }
+
+        //Method to open formularies within the panel
+        private void OpenFormulary<Myform>() where Myform : Form, new()
+        {
+            Form formulary;
+            formulary = panel5.Controls.OfType<Myform>().FirstOrDefault();//Look in the formulary collection
+            //if the formulary/instance does not exist
+            if (formulary == null)
+            {
+                formulary = new Myform();
+                formulary.TopLevel = false;
+                formulary.FormBorderStyle = FormBorderStyle.None;
+                formulary.Dock = DockStyle.Fill;
+                panel5.Controls.Add(formulary);
+                panel5.Tag = formulary;
+                formulary.Show();
+                formulary.BringToFront();
+            }
+            //if the formulary/instance exist 
+            else
+            {
+                formulary.BringToFront();
+            }
+        }
     }
 }
 #endregion

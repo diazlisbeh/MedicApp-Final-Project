@@ -342,6 +342,7 @@
             button1.Text = "EMPLEADOS";
             button1.TextAlign = ContentAlignment.MiddleRight;
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // pictureBox7
             // 
@@ -402,6 +403,7 @@
             btnProfesionales.Text = "DOCTORES";
             btnProfesionales.TextAlign = ContentAlignment.MiddleRight;
             btnProfesionales.UseVisualStyleBackColor = true;
+            btnProfesionales.Click += btnProfesionales_Click;
             // 
             // btnClientes
             // 
@@ -422,6 +424,7 @@
             btnClientes.Text = "PACIENTES";
             btnClientes.TextAlign = ContentAlignment.MiddleRight;
             btnClientes.UseVisualStyleBackColor = true;
+            btnClientes.Click += btnClientes_Click;
             // 
             // btnDashboard
             // 
