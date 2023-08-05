@@ -602,4 +602,25 @@ $RECYCLE.BIN/
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,csharp,windows
+.vs/FinalProject/DesignTimeBuild/.dtbcache.v2
+.vs/FinalProject/v17/.futdcache.v2
+.vs/FinalProject/v17/.suo
+.vs/ProjectEvaluation/finalproject.metadata.v7.bin
+.vs/ProjectEvaluation/finalproject.projects.v7.bin
+.vs/VSWorkspaceState.json
+/.vs/MedicApp-Final-Project/v17/.wsuo
 /.vs/slnx.sqlite
+/DataAccess/obj/DataAccess.csproj.nuget.dgspec.json
+/DataAccess/obj/DataAccess.csproj.nuget.g.props
+/DataAccess/obj/Debug/net7.0/DataAccess.assets.cache
+/DataAccess/obj/Debug/net7.0/DataAccess.csproj.AssemblyReference.cache
+/DataAccess/obj/Debug/net7.0/DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+/DataAccess/obj/project.assets.json
+/DataAccess/obj/project.nuget.cache
+/BusinessLogic/obj/BusinessLogic.csproj.nuget.dgspec.json
+/BusinessLogic/obj/BusinessLogic.csproj.nuget.g.props
+/BusinessLogic/obj/Debug/net7.0/BusinessLogic.assets.cache
+/BusinessLogic/obj/Debug/net7.0/BusinessLogic.csproj.AssemblyReference.cache
+/BusinessLogic/obj/Debug/net7.0/BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+/BusinessLogic/obj/project.assets.json
+/BusinessLogic/obj/project.nuget.cache
