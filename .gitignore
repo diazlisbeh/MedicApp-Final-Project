@@ -602,3 +602,9 @@ $RECYCLE.BIN/
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,csharp,windows
+.vs/FinalProject/DesignTimeBuild/.dtbcache.v2
+.vs/FinalProject/v17/.futdcache.v2
+.vs/FinalProject/v17/.suo
+.vs/ProjectEvaluation/finalproject.metadata.v7.bin
+.vs/ProjectEvaluation/finalproject.projects.v7.bin
+.vs/VSWorkspaceState.json
