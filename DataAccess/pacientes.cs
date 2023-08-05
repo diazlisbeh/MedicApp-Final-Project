@@ -21,5 +21,6 @@ namespace DataAccess
         [ForeignKey("medicos")]
         public int Medico_ID { get; set; }
         public virtual Medico? medicos { get; set; }
+        public virtual ICollection<consultas>? consultas { get; set; }
     }
 }

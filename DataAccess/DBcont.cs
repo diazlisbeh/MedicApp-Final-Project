@@ -8,7 +8,7 @@ namespace DataAccess
    
     public class DBcont:DbContext
     {
-        private string _database = "C:\\Users\\lizbe\\source\\repos\\MedicApp-Final-Project\\DataAccess\\database.db";
+        private string _database = Environment.CurrentDirectory + "\\database.db";
        
         public virtual DbSet<consultas>? consultas { get; set; }
         public virtual DbSet<empleados>? empleados { get; set; }
@@ -21,10 +21,8 @@ namespace DataAccess
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //  optionsBuilder.UseSqlite("Data Source=database.db");
-            File.Exists("database.db");
-            optionsBuilder.UseSqlite($"Data Source={_database}");
-            SQLitePCL.Batteries.Init();
+            optionsBuilder.UseSqlite($"Data Source='{_database}'");
+            //SQLitePCL.Batteries.Init();
         }
     }
 }
