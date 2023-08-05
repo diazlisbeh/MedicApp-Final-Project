@@ -41,12 +41,10 @@
             btnMaxi = new Button();
             btnCerrar = new Button();
             panel2 = new Panel();
-            btnPerfil = new Button();
-            lbCorreo = new Label();
-            lbUsuario = new Label();
-            lbPosicion = new Label();
             pictureBox1 = new PictureBox();
             groupBox1 = new GroupBox();
+            pictureBox10 = new PictureBox();
+            button2 = new Button();
             pictureBox9 = new PictureBox();
             pictureBox8 = new PictureBox();
             button1 = new Button();
@@ -56,8 +54,6 @@
             btnProfesionales = new Button();
             btnClientes = new Button();
             btnDashboard = new Button();
-            button2 = new Button();
-            pictureBox10 = new PictureBox();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -67,11 +63,11 @@
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -224,10 +220,6 @@
             // 
             panel2.AllowDrop = true;
             panel2.BackColor = Color.FromArgb(29, 34, 39);
-            panel2.Controls.Add(btnPerfil);
-            panel2.Controls.Add(lbCorreo);
-            panel2.Controls.Add(lbUsuario);
-            panel2.Controls.Add(lbPosicion);
             panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(groupBox1);
             panel2.Dock = DockStyle.Left;
@@ -238,53 +230,6 @@
             panel2.TabIndex = 2;
             panel2.MouseDown += panel2_MouseDown;
             // 
-            // btnPerfil
-            // 
-            btnPerfil.Cursor = Cursors.Hand;
-            btnPerfil.FlatAppearance.BorderColor = Color.FromArgb(64, 69, 76);
-            btnPerfil.FlatAppearance.BorderSize = 2;
-            btnPerfil.FlatAppearance.MouseOverBackColor = Color.SeaGreen;
-            btnPerfil.FlatStyle = FlatStyle.Flat;
-            btnPerfil.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnPerfil.ForeColor = Color.White;
-            btnPerfil.Location = new Point(10, 85);
-            btnPerfil.Margin = new Padding(3, 2, 3, 2);
-            btnPerfil.Name = "btnPerfil";
-            btnPerfil.Size = new Size(186, 30);
-            btnPerfil.TabIndex = 4;
-            btnPerfil.Text = "Editar Perfil";
-            btnPerfil.UseVisualStyleBackColor = true;
-            // 
-            // lbCorreo
-            // 
-            lbCorreo.AutoSize = true;
-            lbCorreo.ForeColor = Color.White;
-            lbCorreo.Location = new Point(77, 60);
-            lbCorreo.Name = "lbCorreo";
-            lbCorreo.Size = new Size(43, 15);
-            lbCorreo.TabIndex = 3;
-            lbCorreo.Text = "Correo";
-            // 
-            // lbUsuario
-            // 
-            lbUsuario.AutoSize = true;
-            lbUsuario.ForeColor = Color.White;
-            lbUsuario.Location = new Point(77, 34);
-            lbUsuario.Name = "lbUsuario";
-            lbUsuario.Size = new Size(47, 15);
-            lbUsuario.TabIndex = 2;
-            lbUsuario.Text = "Usuario";
-            // 
-            // lbPosicion
-            // 
-            lbPosicion.AutoSize = true;
-            lbPosicion.ForeColor = Color.White;
-            lbPosicion.Location = new Point(77, 9);
-            lbPosicion.Name = "lbPosicion";
-            lbPosicion.Size = new Size(52, 15);
-            lbPosicion.TabIndex = 1;
-            lbPosicion.Text = "Posición";
-            // 
             // pictureBox1
             // 
             pictureBox1.Cursor = Cursors.Hand;
@@ -292,7 +237,7 @@
             pictureBox1.Location = new Point(10, 9);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(61, 52);
+            pictureBox1.Size = new Size(185, 111);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -320,6 +265,37 @@
             groupBox1.Size = new Size(200, 223);
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
+            pictureBox10.Location = new Point(9, 172);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(35, 30);
+            pictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox10.TabIndex = 14;
+            pictureBox10.TabStop = false;
+            // 
+            // button2
+            // 
+            button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button2.Cursor = Cursors.Hand;
+            button2.FlatAppearance.BorderColor = Color.Gray;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 69, 76);
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.ForeColor = Color.White;
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
+            button2.Location = new Point(5, 166);
+            button2.Margin = new Padding(3, 2, 3, 2);
+            button2.Name = "button2";
+            button2.Size = new Size(191, 36);
+            button2.TabIndex = 6;
+            button2.Text = "VACACIONES";
+            button2.TextAlign = ContentAlignment.MiddleRight;
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // pictureBox9
             // 
@@ -465,36 +441,6 @@
             btnDashboard.UseVisualStyleBackColor = true;
             btnDashboard.Click += btnDashboard_Click;
             // 
-            // button2
-            // 
-            button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button2.Cursor = Cursors.Hand;
-            button2.FlatAppearance.BorderColor = Color.Gray;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 69, 76);
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.ForeColor = Color.White;
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(5, 166);
-            button2.Margin = new Padding(3, 2, 3, 2);
-            button2.Name = "button2";
-            button2.Size = new Size(191, 36);
-            button2.TabIndex = 6;
-            button2.Text = "VACACIONES";
-            button2.TextAlign = ContentAlignment.MiddleRight;
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox10
-            // 
-            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
-            pictureBox10.Location = new Point(9, 172);
-            pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(35, 30);
-            pictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox10.TabIndex = 14;
-            pictureBox10.TabStop = false;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -517,11 +463,11 @@
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ResumeLayout(false);
         }
 
@@ -533,10 +479,6 @@
         private Button btnMaxi;
         private Button btnCerrar;
         private Panel panel2;
-        private Button btnPerfil;
-        private Label lbCorreo;
-        private Label lbUsuario;
-        private Label lbPosicion;
         private PictureBox pictureBox1;
         private GroupBox groupBox1;
         private Button btnCiudades;

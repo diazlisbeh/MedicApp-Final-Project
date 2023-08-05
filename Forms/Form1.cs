@@ -148,6 +148,11 @@ namespace Forms
 
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenFormulary<vacaciones>();
+        }
+
         //Method to open formularies within the panel
         private void OpenFormulary<Myform>() where Myform : Form, new()
         {

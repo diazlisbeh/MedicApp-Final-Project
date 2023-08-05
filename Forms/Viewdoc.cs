@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLogic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,9 @@ namespace Forms
         {
             InitializeComponent();
         }
+
+
+
         //Method to open formularies within the panel
         private void OpenFormulary<Myform>() where Myform : Form, new()
         {
@@ -43,6 +47,29 @@ namespace Forms
         {
             OpenFormulary<Form3>();
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void Viewdoc_Load(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private async void Viewdoc_Shown(object sender, EventArgs e)
+        {
+            var medser = new MedicosService();
+            var listamedicos = await medser.GetMedicos();
+            dataGridView1.DataSource = listamedicos;
         }
     }
 }

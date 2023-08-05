@@ -21,7 +21,7 @@ namespace DataAccess
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite($"Data Source='{_database}'");
+           optionsBuilder.UseSqlite($"DataSource='{_database}'");
             //SQLitePCL.Batteries.Init();
         }
     }

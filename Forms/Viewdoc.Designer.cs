@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            dataGridView1 = new DataGridView();
-            label1 = new Label();
-            button2 = new Button();
             button3 = new Button();
+            button2 = new Button();
+            label1 = new Label();
+            dataGridView1 = new DataGridView();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -49,26 +49,21 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(944, 441);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
             // 
-            // dataGridView1
+            // button3
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(116, 33);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(628, 178);
-            dataGridView1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(335, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(203, 21);
-            label1.TabIndex = 1;
-            label1.Text = "DOCTORES REGISTRADOS";
+            button3.FlatAppearance.MouseDownBackColor = Color.Red;
+            button3.FlatAppearance.MouseOverBackColor = Color.Red;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(452, 217);
+            button3.Name = "button3";
+            button3.Size = new Size(86, 33);
+            button3.TabIndex = 24;
+            button3.Text = "Cerrar";
+            button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -85,19 +80,26 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // button3
+            // label1
             // 
-            button3.FlatAppearance.MouseDownBackColor = Color.Red;
-            button3.FlatAppearance.MouseOverBackColor = Color.Red;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(452, 217);
-            button3.Name = "button3";
-            button3.Size = new Size(86, 33);
-            button3.TabIndex = 24;
-            button3.Text = "Cerrar";
-            button3.UseVisualStyleBackColor = true;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(335, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(203, 21);
+            label1.TabIndex = 1;
+            label1.Text = "DOCTORES REGISTRADOS";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(116, 33);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(628, 178);
+            dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Viewdoc
             // 
@@ -107,6 +109,8 @@
             Controls.Add(panel1);
             Name = "Viewdoc";
             Text = "Viewdoc";
+            Load += Viewdoc_Load;
+            Shown += Viewdoc_Shown;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
