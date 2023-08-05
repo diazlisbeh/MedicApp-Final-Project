@@ -28,23 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox10 = new TextBox();
             textBox1 = new TextBox();
-            textBox2 = new TextBox();
             label1 = new Label();
             button1 = new Button();
             button2 = new Button();
             label3 = new Label();
             label2 = new Label();
             label4 = new Label();
+            dateTimePicker1 = new DateTimePicker();
+            dateTimePicker2 = new DateTimePicker();
             SuspendLayout();
-            // 
-            // textBox10
-            // 
-            textBox10.Location = new Point(327, 158);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(100, 23);
-            textBox10.TabIndex = 19;
             // 
             // textBox1
             // 
@@ -52,13 +45,6 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(156, 23);
             textBox1.TabIndex = 20;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(623, 158);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 21;
             // 
             // label1
             // 
@@ -125,12 +111,28 @@
             // 
             label4.AutoSize = true;
             label4.ForeColor = Color.White;
-            label4.Location = new Point(623, 140);
+            label4.Location = new Point(605, 140);
             label4.Name = "label4";
             label4.Size = new Size(58, 15);
             label4.TabIndex = 31;
             label4.Text = "Fecha fin ";
             label4.Click += label4_Click;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new Point(327, 158);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(111, 23);
+            dateTimePicker1.TabIndex = 32;
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Format = DateTimePickerFormat.Short;
+            dateTimePicker2.Location = new Point(605, 158);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(111, 23);
+            dateTimePicker2.TabIndex = 33;
             // 
             // RegistroVacaciones
             // 
@@ -138,15 +140,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 69, 76);
             ClientSize = new Size(800, 450);
+            Controls.Add(dateTimePicker2);
+            Controls.Add(dateTimePicker1);
             Controls.Add(label4);
             Controls.Add(label2);
             Controls.Add(label3);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(label1);
-            Controls.Add(textBox2);
             Controls.Add(textBox1);
-            Controls.Add(textBox10);
             Name = "RegistroVacaciones";
             Text = "RegistroVacaciones";
             ResumeLayout(false);
@@ -154,15 +156,14 @@
         }
 
         #endregion
-
-        private TextBox textBox10;
         private TextBox textBox1;
-        private TextBox textBox2;
         private Label label1;
         private Button button1;
         private Button button2;
         private Label label3;
         private Label label2;
         private Label label4;
+        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dateTimePicker2;
     }
 }

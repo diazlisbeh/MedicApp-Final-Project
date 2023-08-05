@@ -31,13 +31,13 @@ namespace Forms
             var service = new VacacionesService();
 
             vaciones.Empleado_ID = int.Parse(textBox1.Text);
-            vaciones.Fecha_inicio = DateOnly.Parse(textBox10.Text);
-            vaciones.Fecha_fin = DateOnly.Parse(textBox2.Text);
-           
+            vaciones.Fecha_inicio = DateOnly.FromDateTime(dateTimePicker1.Value);
+            vaciones.Fecha_fin = DateOnly.FromDateTime(dateTimePicker2.Value);
+
             int result = await service.AddVaciones(vaciones);
 
-           /* if(result == 1) { MessageBox.Show("Se ha agregado el periodo de vaciones correctamente"); }
-            else { MessageBox.Show("Ha ocurrido un error"); }*/
+            /* if(result == 1) { MessageBox.Show("Se ha agregado el periodo de vaciones correctamente"); }
+             else { MessageBox.Show("Ha ocurrido un error"); }*/
         }
 
         private void button2_Click(object sender, EventArgs e)
