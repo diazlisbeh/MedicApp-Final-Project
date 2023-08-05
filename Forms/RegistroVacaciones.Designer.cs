@@ -32,7 +32,6 @@
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             label1 = new Label();
-            button3 = new Button();
             button1 = new Button();
             button2 = new Button();
             label3 = new Label();
@@ -72,20 +71,6 @@
             label1.TabIndex = 22;
             label1.Text = "REGISTRO DE VACACIONES ";
             // 
-            // button3
-            // 
-            button3.FlatAppearance.MouseDownBackColor = Color.Red;
-            button3.FlatAppearance.MouseOverBackColor = Color.Red;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(28, 376);
-            button3.Name = "button3";
-            button3.Size = new Size(86, 33);
-            button3.TabIndex = 26;
-            button3.Text = "Cancelar ";
-            button3.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
             button1.FlatAppearance.MouseDownBackColor = Color.Lime;
@@ -93,7 +78,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(341, 376);
+            button1.Location = new Point(140, 376);
             button1.Name = "button1";
             button1.Size = new Size(86, 33);
             button1.TabIndex = 27;
@@ -107,7 +92,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(623, 376);
+            button2.Location = new Point(426, 376);
             button2.Name = "button2";
             button2.Size = new Size(86, 33);
             button2.TabIndex = 28;
@@ -157,7 +142,6 @@
             Controls.Add(label3);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(button3);
             Controls.Add(label1);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
@@ -174,7 +158,6 @@
         private TextBox textBox1;
         private TextBox textBox2;
         private Label label1;
-        private Button button3;
         private Button button1;
         private Button button2;
         private Label label3;

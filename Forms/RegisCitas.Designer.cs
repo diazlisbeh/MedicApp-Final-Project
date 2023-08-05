@@ -31,7 +31,6 @@
             panel1 = new Panel();
             button3 = new Button();
             button2 = new Button();
-            button1 = new Button();
             textBox5 = new TextBox();
             label6 = new Label();
             textBox4 = new TextBox();
@@ -51,7 +50,6 @@
             panel1.BackColor = Color.FromArgb(64, 69, 76);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
             panel1.Controls.Add(textBox5);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(textBox4);
@@ -77,7 +75,7 @@
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(726, 352);
+            button3.Location = new Point(511, 352);
             button3.Name = "button3";
             button3.Size = new Size(86, 33);
             button3.TabIndex = 23;
@@ -92,26 +90,12 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(407, 352);
+            button2.Location = new Point(187, 352);
             button2.Name = "button2";
             button2.Size = new Size(86, 33);
             button2.TabIndex = 22;
             button2.Text = "Guardar";
             button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.FlatAppearance.MouseDownBackColor = Color.Red;
-            button1.FlatAppearance.MouseOverBackColor = Color.Red;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(26, 352);
-            button1.Name = "button1";
-            button1.Size = new Size(86, 33);
-            button1.TabIndex = 19;
-            button1.Text = "Cancelar";
-            button1.UseVisualStyleBackColor = true;
             // 
             // textBox5
             // 
@@ -232,7 +216,6 @@
         private Panel panel1;
         private Button button3;
         private Button button2;
-        private Button button1;
         private TextBox textBox5;
         private Label label6;
         private TextBox textBox4;
