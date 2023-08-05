@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLogic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,9 +18,11 @@ namespace Forms
             InitializeComponent();
         }
 
-        private void vacaciones_Load(object sender, EventArgs e)
+        private async void vacaciones_Load(object sender, EventArgs e)
         {
-
+            var service = new VacacionesService();
+            var vacaciones = await service.GetVaciones();
+            this.dataGridView1.DataSource = vacaciones;
         }
 
         //Method to open formularies within the panel
