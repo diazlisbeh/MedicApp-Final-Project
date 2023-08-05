@@ -18,7 +18,7 @@ namespace BusinessLogic
         public int NIF { get; set; }
         public string? Numero_de_seguridad_social { get; set; }
         public string? Numero_de_colegiado { get; set; }
-        public int Tipo_empleado { get; set; }
+        public string? Tipo { get; set; }
         public bool EsSustituto { get; set; }
         public bool Activo { get; set; }
     }

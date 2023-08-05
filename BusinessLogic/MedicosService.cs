@@ -15,25 +15,52 @@ namespace BusinessLogic
             _context = context;
         }
 
-        public async Task<List<medicos>> GetMedicos()
+        public async Task<int> DeleteMedico(int medicoId)
         {
-            var medicos = await _context.medicos.ToListAsync();
+            try
+            {
+                var medico = await _context.medicos.FirstOrDefaultAsync(m => m.ID == medicoId);
+                if(medico is null) return 0;
+                 _context.medicos.Remove(medico);    
+                await _context.SaveChangesAsync();
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return 0;
+            }
+        }
+
+        public async Task<int> AddMedicos(Medico medico)
+        {
+            try
+            {
+                await _context.AddAsync(medico);
+                await _context.SaveChangesAsync();
+                return 1;
+            }catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return 0;
+            }
+        }
+
+        public async Task<List<Medico>> GetMedicos()
+        {
+            var medicos = await _context.medicos  . ToListAsync();
             return medicos;
         }
 
-        public async Task<List<consultas>> GetConsultas()
-        {
-            var consultas = await _context.consultas.ToListAsync();
-            return consultas;
-        }
-
-        public async Task<List<MedicosDto>> GetMedicosWithSus()
+      
+        public async Task<List<MedicosDto>> GetMedicosWithSustituto()
         {
             var sustitutos = await _context.sustitutos.ToListAsync();
             var medicos = await _context.medicos.ToListAsync();
             
 
             var medicosDto = new List<MedicosDto>();
+
             foreach(var medico in medicos)
             {
                 medicosDto.Add(new MedicosDto()
@@ -47,7 +74,7 @@ namespace BusinessLogic
                     NIF = medico.NIF,
                     Numero_de_seguridad_social = medico.Numero_de_seguridad_social,
                     Numero_de_colegiado = medico.Numero_de_colegiado,
-                    Tipo_empleado = medico.Tipo_empleado,
+                    Tipo = medico.Tipo,
                     EsSustituto = sustitutos.Exists(p => p.Medico_ID == medico.ID),
                     Activo = sustitutos.Exists(p => p.Medico_ID == medico.ID) 
                     ? EstaActivo(sustitutos.FirstOrDefault(p => p.Medico_ID == medico.ID).Fecha_alta, sustitutos.FirstOrDefault(p => p.Medico_ID == medico.ID).Fecha_baja)
