@@ -113,6 +113,7 @@
             button2.TabIndex = 28;
             button2.Text = "Cerrar";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // label3
             // 
@@ -145,7 +146,7 @@
             label4.Text = "Fecha fin ";
             label4.Click += label4_Click;
             // 
-            // Form4
+            // RegistroVacaciones
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;

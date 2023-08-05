@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            button3 = new Button();
             button2 = new Button();
             button1 = new Button();
             label12 = new Label();
@@ -58,7 +57,6 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(label12);
@@ -88,21 +86,6 @@
             panel1.Size = new Size(944, 441);
             panel1.TabIndex = 0;
             // 
-            // button3
-            // 
-            button3.FlatAppearance.MouseDownBackColor = Color.Red;
-            button3.FlatAppearance.MouseOverBackColor = Color.Red;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(12, 382);
-            button3.Name = "button3";
-            button3.Size = new Size(86, 33);
-            button3.TabIndex = 49;
-            button3.Text = "Cancelar ";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
             // button2
             // 
             button2.FlatAppearance.MouseDownBackColor = Color.Red;
@@ -110,7 +93,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(671, 382);
+            button2.Location = new Point(494, 382);
             button2.Name = "button2";
             button2.Size = new Size(86, 33);
             button2.TabIndex = 48;
@@ -125,13 +108,12 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(323, 382);
+            button1.Location = new Point(187, 382);
             button1.Name = "button1";
             button1.Size = new Size(86, 33);
             button1.TabIndex = 47;
             button1.Text = "Guardar ";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // label12
             // 
@@ -331,7 +313,6 @@
         #endregion
 
         private Panel panel1;
-        private Button button3;
         private Button button2;
         private Button button1;
         private Label label12;

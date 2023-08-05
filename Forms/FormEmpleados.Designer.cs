@@ -49,7 +49,6 @@
             textBox2 = new TextBox();
             label2 = new Label();
             textBox1 = new TextBox();
-            button1 = new Button();
             label1 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -76,7 +75,6 @@
             panel1.Controls.Add(textBox2);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(button1);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
@@ -92,7 +90,7 @@
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(430, 355);
+            button3.Location = new Point(208, 355);
             button3.Name = "button3";
             button3.Size = new Size(86, 33);
             button3.TabIndex = 24;
@@ -107,7 +105,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(782, 355);
+            button2.Location = new Point(518, 355);
             button2.Name = "button2";
             button2.Size = new Size(86, 33);
             button2.TabIndex = 23;
@@ -119,7 +117,7 @@
             // 
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Administrador", "ATS", "ATS de Zona", "Auxiliares de emfermeria", "Celadores" });
+            comboBox1.Items.AddRange(new object[] { "Administrador", "ATS", "ATS de Zona", "Auxiliares de enfermeria", "Celadores" });
             comboBox1.Location = new Point(742, 264);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(157, 23);
@@ -281,20 +279,6 @@
             textBox1.Size = new Size(202, 23);
             textBox1.TabIndex = 4;
             // 
-            // button1
-            // 
-            button1.FlatAppearance.MouseDownBackColor = Color.Red;
-            button1.FlatAppearance.MouseOverBackColor = Color.Red;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(66, 355);
-            button1.Name = "button1";
-            button1.Size = new Size(86, 33);
-            button1.TabIndex = 3;
-            button1.Text = "Cancelar";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -326,7 +310,6 @@
         private Label label1;
         private Label label2;
         private TextBox textBox1;
-        private Button button1;
         private Label label4;
         private TextBox textBox3;
         private Label label3;
