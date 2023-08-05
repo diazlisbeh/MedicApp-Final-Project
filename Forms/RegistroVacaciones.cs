@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Forms
 {
-    public partial class Form4 : Form
+    public partial class RegistroVacaciones : Form
     {
-        public Form4()
+        public RegistroVacaciones()
         {
             InitializeComponent();
         }

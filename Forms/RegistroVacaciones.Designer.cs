@@ -1,6 +1,6 @@
 ﻿namespace Forms
 {
-    partial class Form4
+    partial class RegistroVacaciones
     {
         /// <summary>
         /// Required designer variable.
@@ -161,8 +161,8 @@
             Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(textBox10);
-            Name = "Form4";
-            Text = "Form4";
+            Name = "RegistroVacaciones";
+            Text = "RegistroVacaciones";
             ResumeLayout(false);
             PerformLayout();
         }
