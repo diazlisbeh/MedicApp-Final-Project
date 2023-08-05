@@ -602,10 +602,11 @@ $RECYCLE.BIN/
 # Additional files built by Visual Studio
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,csharp,windows
-/.vs/FinalProject/DesignTimeBuild/.dtbcache.v2
-/.vs/FinalProject/v17/.futdcache.v2
-/.vs/FinalProject/v17/.suo
-/.vs/MedicApp-Final-Project/v17/.wsuo
-/.vs/slnx.sqlite
-/.vs/ProjectEvaluation/finalproject.metadata.v7.bin
-/.vs/ProjectEvaluation/finalproject.projects.v7.bin
+/DataAccess/obj/Debug/net7.0/DataAccess.assets.cache
+/DataAccess/obj/Debug/net7.0/DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+/DataAccess/obj/DataAccess.csproj.nuget.dgspec.json
+/DataAccess/obj/DataAccess.csproj.nuget.g.props
+/DataAccess/obj/project.assets.json
+/DataAccess/obj/project.nuget.cache
+/DataAccess/obj/Release/net7.0/DataAccess.assets.cache
+/DataAccess/obj/Release/net7.0/DataAccess.GeneratedMSBuildEditorConfig.editorconfig
