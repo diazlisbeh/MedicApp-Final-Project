@@ -47,6 +47,7 @@
             lbPosicion = new Label();
             pictureBox1 = new PictureBox();
             groupBox1 = new GroupBox();
+            pictureBox9 = new PictureBox();
             pictureBox8 = new PictureBox();
             button1 = new Button();
             pictureBox7 = new PictureBox();
@@ -55,6 +56,8 @@
             btnProfesionales = new Button();
             btnClientes = new Button();
             btnDashboard = new Button();
+            button2 = new Button();
+            pictureBox10 = new PictureBox();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -64,9 +67,11 @@
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -296,6 +301,9 @@
             // 
             groupBox1.AutoSize = true;
             groupBox1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            groupBox1.Controls.Add(pictureBox10);
+            groupBox1.Controls.Add(button2);
+            groupBox1.Controls.Add(pictureBox9);
             groupBox1.Controls.Add(pictureBox8);
             groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(pictureBox7);
@@ -309,9 +317,19 @@
             groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(3, 2, 3, 2);
-            groupBox1.Size = new Size(200, 201);
+            groupBox1.Size = new Size(200, 223);
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
+            pictureBox9.Location = new Point(8, 21);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(35, 30);
+            pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox9.TabIndex = 13;
+            pictureBox9.TabStop = false;
             // 
             // pictureBox8
             // 
@@ -342,6 +360,7 @@
             button1.Text = "EMPLEADOS";
             button1.TextAlign = ContentAlignment.MiddleRight;
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // pictureBox7
             // 
@@ -402,6 +421,7 @@
             btnProfesionales.Text = "DOCTORES";
             btnProfesionales.TextAlign = ContentAlignment.MiddleRight;
             btnProfesionales.UseVisualStyleBackColor = true;
+            btnProfesionales.Click += btnProfesionales_Click;
             // 
             // btnClientes
             // 
@@ -422,6 +442,7 @@
             btnClientes.Text = "PACIENTES";
             btnClientes.TextAlign = ContentAlignment.MiddleRight;
             btnClientes.UseVisualStyleBackColor = true;
+            btnClientes.Click += btnClientes_Click;
             // 
             // btnDashboard
             // 
@@ -434,14 +455,45 @@
             btnDashboard.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnDashboard.ForeColor = Color.White;
             btnDashboard.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDashboard.Location = new Point(6, 19);
+            btnDashboard.Location = new Point(8, 19);
             btnDashboard.Margin = new Padding(3, 2, 3, 2);
             btnDashboard.Name = "btnDashboard";
             btnDashboard.Size = new Size(191, 36);
             btnDashboard.TabIndex = 5;
-            btnDashboard.Text = "DASHBOARD";
+            btnDashboard.Text = "CONSULTAS";
             btnDashboard.TextAlign = ContentAlignment.MiddleRight;
             btnDashboard.UseVisualStyleBackColor = true;
+            btnDashboard.Click += btnDashboard_Click;
+            // 
+            // button2
+            // 
+            button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button2.Cursor = Cursors.Hand;
+            button2.FlatAppearance.BorderColor = Color.Gray;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 69, 76);
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.ForeColor = Color.White;
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
+            button2.Location = new Point(5, 166);
+            button2.Margin = new Padding(3, 2, 3, 2);
+            button2.Name = "button2";
+            button2.Size = new Size(191, 36);
+            button2.TabIndex = 6;
+            button2.Text = "VACACIONES";
+            button2.TextAlign = ContentAlignment.MiddleRight;
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox10
+            // 
+            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
+            pictureBox10.Location = new Point(9, 172);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(35, 30);
+            pictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox10.TabIndex = 14;
+            pictureBox10.TabStop = false;
             // 
             // Form1
             // 
@@ -465,9 +517,11 @@
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
             ResumeLayout(false);
         }
 
@@ -499,5 +553,8 @@
         private PictureBox pictureBox6;
         private PictureBox pictureBox8;
         private Button button1;
+        private PictureBox pictureBox9;
+        private Button button2;
+        private PictureBox pictureBox10;
     }
 }
