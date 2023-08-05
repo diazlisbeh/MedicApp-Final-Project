@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\force\\Documents\\Código Fuente\\C#\\MedicApp-Final-Project\\DataAccess\\DataAccess.csproj": {}
+    "C:\\Users\\lizbe\\source\\repos\\MedicApp-Final-Project\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\force\\Documents\\Código Fuente\\C#\\MedicApp-Final-Project\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\lizbe\\source\\repos\\MedicApp-Final-Project\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\force\\Documents\\Código Fuente\\C#\\MedicApp-Final-Project\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\lizbe\\source\\repos\\MedicApp-Final-Project\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\force\\Documents\\Código Fuente\\C#\\MedicApp-Final-Project\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\force\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\force\\Documents\\Código Fuente\\C#\\MedicApp-Final-Project\\DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\lizbe\\source\\repos\\MedicApp-Final-Project\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\lizbe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lizbe\\source\\repos\\MedicApp-Final-Project\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\force\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lizbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -53,6 +53,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.9, )"
+            },
+            "SQLitePCLRaw.bundle_e_sqlite3": {
+              "target": "Package",
+              "version": "[2.1.5, )"
             }
           },
           "imports": [
@@ -71,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "c:\\program files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

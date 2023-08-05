@@ -10,5 +10,6 @@ namespace DataAccess
     {
         public int ID { get; set; }
         public string Tipo { get; set; }
+        public virtual ICollection<empleados> empleados {get;set;}
     }
 }
