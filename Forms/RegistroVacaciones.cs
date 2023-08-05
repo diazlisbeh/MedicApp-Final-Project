@@ -36,8 +36,9 @@ namespace Forms
 
             int result = await service.AddVaciones(vaciones);
 
-            /* if(result == 1) { MessageBox.Show("Se ha agregado el periodo de vaciones correctamente"); }
-             else { MessageBox.Show("Ha ocurrido un error"); }*/
+            if(result == 1) { MessageBox.Show("Se ha agregado el periodo de vaciones correctamente"); }
+             else { MessageBox.Show("Ha ocurrido un error"); }
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
