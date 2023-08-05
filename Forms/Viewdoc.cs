@@ -71,5 +71,10 @@ namespace Forms
             var listamedicos = await medser.GetMedicos();
             dataGridView1.DataSource = listamedicos;
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

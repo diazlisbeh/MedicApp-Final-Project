@@ -29,19 +29,19 @@ C:\Users\FAILEEN\Source\Repos\MedicApp-Final-Project\BusinessLogic\obj\Debug\net
 C:\Users\FAILEEN\Source\Repos\MedicApp-Final-Project\BusinessLogic\obj\Debug\net7.0\refint\BusinessLogic.dll
 C:\Users\FAILEEN\Source\Repos\MedicApp-Final-Project\BusinessLogic\obj\Debug\net7.0\BusinessLogic.pdb
 C:\Users\FAILEEN\Source\Repos\MedicApp-Final-Project\BusinessLogic\obj\Debug\net7.0\ref\BusinessLogic.dll
-C:\Users\lizbe\Source\Repos\MedicApp-Final-Project2\BusinessLogic\bin\Debug\net7.0\database.db
-C:\Users\lizbe\Source\Repos\MedicApp-Final-Project2\BusinessLogic\bin\Debug\net7.0\BusinessLogic.deps.json
-C:\Users\lizbe\Source\Repos\MedicApp-Final-Project2\BusinessLogic\bin\Debug\net7.0\BusinessLogic.dll
-C:\Users\lizbe\Source\Repos\MedicApp-Final-Project2\BusinessLogic\bin\Debug\net7.0\BusinessLogic.pdb
-C:\Users\lizbe\Source\Repos\MedicApp-Final-Project2\BusinessLogic\bin\Debug\net7.0\DataAccess.dll
-C:\Users\lizbe\Source\Repos\MedicApp-Final-Project2\BusinessLogic\bin\Debug\net7.0\DataAccess.pdb
-C:\Users\lizbe\Source\Repos\MedicApp-Final-Project2\BusinessLogic\obj\Debug\net7.0\BusinessLogic.csproj.AssemblyReference.cache
-C:\Users\lizbe\Source\Repos\MedicApp-Final-Project2\BusinessLogic\obj\Debug\net7.0\BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\lizbe\Source\Repos\MedicApp-Final-Project2\BusinessLogic\obj\Debug\net7.0\BusinessLogic.AssemblyInfoInputs.cache
-C:\Users\lizbe\Source\Repos\MedicApp-Final-Project2\BusinessLogic\obj\Debug\net7.0\BusinessLogic.AssemblyInfo.cs
-C:\Users\lizbe\Source\Repos\MedicApp-Final-Project2\BusinessLogic\obj\Debug\net7.0\BusinessLogic.csproj.CoreCompileInputs.cache
-C:\Users\lizbe\Source\Repos\MedicApp-Final-Project2\BusinessLogic\obj\Debug\net7.0\BusinessLogic.csproj.CopyComplete
-C:\Users\lizbe\Source\Repos\MedicApp-Final-Project2\BusinessLogic\obj\Debug\net7.0\BusinessLogic.dll
-C:\Users\lizbe\Source\Repos\MedicApp-Final-Project2\BusinessLogic\obj\Debug\net7.0\refint\BusinessLogic.dll
-C:\Users\lizbe\Source\Repos\MedicApp-Final-Project2\BusinessLogic\obj\Debug\net7.0\BusinessLogic.pdb
-C:\Users\lizbe\Source\Repos\MedicApp-Final-Project2\BusinessLogic\obj\Debug\net7.0\ref\BusinessLogic.dll
+C:\Users\force\Documents\Código Fuente\C#\MedicApp-Final-Project\BusinessLogic\bin\Debug\net7.0\database.db
+C:\Users\force\Documents\Código Fuente\C#\MedicApp-Final-Project\BusinessLogic\bin\Debug\net7.0\BusinessLogic.deps.json
+C:\Users\force\Documents\Código Fuente\C#\MedicApp-Final-Project\BusinessLogic\bin\Debug\net7.0\BusinessLogic.dll
+C:\Users\force\Documents\Código Fuente\C#\MedicApp-Final-Project\BusinessLogic\bin\Debug\net7.0\BusinessLogic.pdb
+C:\Users\force\Documents\Código Fuente\C#\MedicApp-Final-Project\BusinessLogic\bin\Debug\net7.0\DataAccess.dll
+C:\Users\force\Documents\Código Fuente\C#\MedicApp-Final-Project\BusinessLogic\bin\Debug\net7.0\DataAccess.pdb
+C:\Users\force\Documents\Código Fuente\C#\MedicApp-Final-Project\BusinessLogic\obj\Debug\net7.0\BusinessLogic.csproj.AssemblyReference.cache
+C:\Users\force\Documents\Código Fuente\C#\MedicApp-Final-Project\BusinessLogic\obj\Debug\net7.0\BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\force\Documents\Código Fuente\C#\MedicApp-Final-Project\BusinessLogic\obj\Debug\net7.0\BusinessLogic.AssemblyInfoInputs.cache
+C:\Users\force\Documents\Código Fuente\C#\MedicApp-Final-Project\BusinessLogic\obj\Debug\net7.0\BusinessLogic.AssemblyInfo.cs
+C:\Users\force\Documents\Código Fuente\C#\MedicApp-Final-Project\BusinessLogic\obj\Debug\net7.0\BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\force\Documents\Código Fuente\C#\MedicApp-Final-Project\BusinessLogic\obj\Debug\net7.0\BusinessLogic.csproj.CopyComplete
+C:\Users\force\Documents\Código Fuente\C#\MedicApp-Final-Project\BusinessLogic\obj\Debug\net7.0\BusinessLogic.dll
+C:\Users\force\Documents\Código Fuente\C#\MedicApp-Final-Project\BusinessLogic\obj\Debug\net7.0\refint\BusinessLogic.dll
+C:\Users\force\Documents\Código Fuente\C#\MedicApp-Final-Project\BusinessLogic\obj\Debug\net7.0\BusinessLogic.pdb
+C:\Users\force\Documents\Código Fuente\C#\MedicApp-Final-Project\BusinessLogic\obj\Debug\net7.0\ref\BusinessLogic.dll
