@@ -83,7 +83,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(944, 441);
+            panel1.Size = new Size(818, 441);
             panel1.TabIndex = 0;
             // 
             // button2
@@ -118,45 +118,48 @@
             // label12
             // 
             label12.AutoSize = true;
+            label12.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label12.ForeColor = Color.White;
-            label12.Location = new Point(341, 216);
+            label12.Location = new Point(323, 210);
             label12.Name = "label12";
-            label12.Size = new Size(30, 15);
+            label12.Size = new Size(40, 21);
             label12.TabIndex = 46;
             label12.Text = "Tipo";
             // 
             // label11
             // 
             label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label11.ForeColor = Color.White;
-            label11.Location = new Point(657, 144);
+            label11.Location = new Point(589, 139);
             label11.Name = "label11";
-            label11.Size = new Size(122, 15);
+            label11.Size = new Size(163, 21);
             label11.TabIndex = 45;
-            label11.Text = "Numero de colegiado";
+            label11.Text = "Numero de Colegiado";
             // 
             // label10
             // 
             label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label10.ForeColor = Color.White;
-            label10.Location = new Point(638, 65);
+            label10.Location = new Point(589, 59);
             label10.Name = "label10";
-            label10.Size = new Size(155, 15);
+            label10.Size = new Size(209, 21);
             label10.TabIndex = 44;
-            label10.Text = "Numero de seguridad social";
+            label10.Text = "Numero de Seguridad Social";
             // 
             // textBox11
             // 
-            textBox11.Location = new Point(657, 83);
+            textBox11.Location = new Point(589, 83);
             textBox11.Name = "textBox11";
-            textBox11.Size = new Size(100, 23);
+            textBox11.Size = new Size(160, 23);
             textBox11.TabIndex = 43;
             // 
             // textBox10
             // 
-            textBox10.Location = new Point(657, 162);
+            textBox10.Location = new Point(589, 162);
             textBox10.Name = "textBox10";
-            textBox10.Size = new Size(100, 23);
+            textBox10.Size = new Size(160, 23);
             textBox10.TabIndex = 42;
             // 
             // textBox9
@@ -176,10 +179,11 @@
             // label9
             // 
             label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label9.ForeColor = Color.White;
-            label9.Location = new Point(341, 293);
+            label9.Location = new Point(323, 287);
             label9.Name = "label9";
-            label9.Size = new Size(25, 15);
+            label9.Size = new Size(34, 21);
             label9.TabIndex = 39;
             label9.Text = "NIF";
             // 
@@ -193,10 +197,11 @@
             // label8
             // 
             label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label8.ForeColor = Color.White;
-            label8.Location = new Point(12, 291);
+            label8.Location = new Point(12, 287);
             label8.Name = "label8";
-            label8.Size = new Size(81, 15);
+            label8.Size = new Size(106, 21);
             label8.TabIndex = 37;
             label8.Text = "Codigo postal";
             // 
@@ -210,20 +215,22 @@
             // label6
             // 
             label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(341, 144);
+            label6.Location = new Point(323, 138);
             label6.Name = "label6";
-            label6.Size = new Size(56, 15);
+            label6.Size = new Size(74, 21);
             label6.TabIndex = 35;
             label6.Text = "Provincia";
             // 
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(337, 65);
+            label5.Location = new Point(319, 59);
             label5.Name = "label5";
-            label5.Size = new Size(60, 15);
+            label5.Size = new Size(77, 21);
             label5.TabIndex = 34;
             label5.Text = "Poblacion";
             // 
@@ -237,10 +244,11 @@
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(11, 216);
+            label4.Location = new Point(12, 211);
             label4.Name = "label4";
-            label4.Size = new Size(52, 15);
+            label4.Size = new Size(68, 21);
             label4.TabIndex = 32;
             label4.Text = "Telefono";
             // 
@@ -254,10 +262,11 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(6, 144);
+            label3.Location = new Point(11, 139);
             label3.Name = "label3";
-            label3.Size = new Size(57, 15);
+            label3.Size = new Size(75, 21);
             label3.TabIndex = 30;
             label3.Text = "Direccion";
             // 
@@ -271,10 +280,11 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(12, 65);
+            label2.Location = new Point(11, 60);
             label2.Name = "label2";
-            label2.Size = new Size(51, 15);
+            label2.Size = new Size(68, 21);
             label2.TabIndex = 28;
             label2.Text = "Nombre";
             // 
@@ -301,7 +311,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 69, 76);
-            ClientSize = new Size(944, 441);
+            ClientSize = new Size(818, 441);
             Controls.Add(panel1);
             Name = "Form3";
             Text = "Form3";

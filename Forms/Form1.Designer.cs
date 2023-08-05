@@ -79,9 +79,8 @@
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1257, 1051);
+            panel1.Size = new Size(1100, 788);
             panel1.TabIndex = 0;
             panel1.MouseDown += panel1_MouseDown;
             // 
@@ -90,9 +89,10 @@
             panel4.AllowDrop = true;
             panel4.BackColor = Color.FromArgb(55, 61, 69);
             panel4.Dock = DockStyle.Bottom;
-            panel4.Location = new Point(230, 1000);
+            panel4.Location = new Point(201, 750);
+            panel4.Margin = new Padding(3, 2, 3, 2);
             panel4.Name = "panel4";
-            panel4.Size = new Size(1027, 51);
+            panel4.Size = new Size(899, 38);
             panel4.TabIndex = 5;
             panel4.MouseDown += panel4_MouseDown;
             // 
@@ -101,9 +101,10 @@
             panel5.AllowDrop = true;
             panel5.BackColor = Color.FromArgb(64, 69, 76);
             panel5.Dock = DockStyle.Fill;
-            panel5.Location = new Point(230, 81);
+            panel5.Location = new Point(201, 61);
+            panel5.Margin = new Padding(3, 2, 3, 2);
             panel5.Name = "panel5";
-            panel5.Size = new Size(1027, 970);
+            panel5.Size = new Size(899, 727);
             panel5.TabIndex = 4;
             panel5.Paint += panel5_Paint;
             panel5.MouseDown += panel5_MouseDown;
@@ -120,9 +121,10 @@
             panel3.Controls.Add(btnMaxi);
             panel3.Controls.Add(btnCerrar);
             panel3.Dock = DockStyle.Top;
-            panel3.Location = new Point(230, 0);
+            panel3.Location = new Point(201, 0);
+            panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1027, 81);
+            panel3.Size = new Size(899, 61);
             panel3.TabIndex = 3;
             panel3.Paint += panel3_Paint;
             panel3.MouseDown += panel3_MouseDown;
@@ -130,10 +132,9 @@
             // pictureBox5
             // 
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(817, 20);
-            pictureBox5.Margin = new Padding(3, 4, 3, 4);
+            pictureBox5.Location = new Point(715, 15);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(24, 24);
+            pictureBox5.Size = new Size(21, 18);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox5.TabIndex = 6;
             pictureBox5.TabStop = false;
@@ -142,10 +143,9 @@
             // pictureBox4
             // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(770, 20);
-            pictureBox4.Margin = new Padding(3, 4, 3, 4);
+            pictureBox4.Location = new Point(674, 15);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(24, 24);
+            pictureBox4.Size = new Size(21, 18);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 5;
             pictureBox4.TabStop = false;
@@ -154,10 +154,9 @@
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(723, 20);
-            pictureBox3.Margin = new Padding(3, 4, 3, 4);
+            pictureBox3.Location = new Point(633, 15);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(24, 24);
+            pictureBox3.Size = new Size(21, 18);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox3.TabIndex = 4;
             pictureBox3.TabStop = false;
@@ -166,10 +165,9 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(7, 12);
-            pictureBox2.Margin = new Padding(3, 4, 3, 4);
+            pictureBox2.Location = new Point(6, 9);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(40, 40);
+            pictureBox2.Size = new Size(35, 30);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 3;
             pictureBox2.TabStop = false;
@@ -182,9 +180,10 @@
             btnMini.Cursor = Cursors.Hand;
             btnMini.FlatAppearance.BorderSize = 0;
             btnMini.FlatStyle = FlatStyle.Flat;
-            btnMini.Location = new Point(1413, 24);
+            btnMini.Location = new Point(1236, 18);
+            btnMini.Margin = new Padding(3, 2, 3, 2);
             btnMini.Name = "btnMini";
-            btnMini.Size = new Size(24, 1);
+            btnMini.Size = new Size(21, 1);
             btnMini.TabIndex = 2;
             btnMini.UseVisualStyleBackColor = false;
             // 
@@ -196,9 +195,10 @@
             btnMaxi.Cursor = Cursors.Hand;
             btnMaxi.FlatAppearance.BorderSize = 0;
             btnMaxi.FlatStyle = FlatStyle.Flat;
-            btnMaxi.Location = new Point(1443, 24);
+            btnMaxi.Location = new Point(1263, 18);
+            btnMaxi.Margin = new Padding(3, 2, 3, 2);
             btnMaxi.Name = "btnMaxi";
-            btnMaxi.Size = new Size(24, 1);
+            btnMaxi.Size = new Size(21, 1);
             btnMaxi.TabIndex = 1;
             btnMaxi.UseVisualStyleBackColor = false;
             // 
@@ -210,9 +210,10 @@
             btnCerrar.Cursor = Cursors.Hand;
             btnCerrar.FlatAppearance.BorderSize = 0;
             btnCerrar.FlatStyle = FlatStyle.Flat;
-            btnCerrar.Location = new Point(1475, 24);
+            btnCerrar.Location = new Point(1291, 18);
+            btnCerrar.Margin = new Padding(3, 2, 3, 2);
             btnCerrar.Name = "btnCerrar";
-            btnCerrar.Size = new Size(24, 1);
+            btnCerrar.Size = new Size(21, 1);
             btnCerrar.TabIndex = 0;
             btnCerrar.UseVisualStyleBackColor = false;
             // 
@@ -224,8 +225,9 @@
             panel2.Controls.Add(groupBox1);
             panel2.Dock = DockStyle.Left;
             panel2.Location = new Point(0, 0);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(230, 1051);
+            panel2.Size = new Size(201, 788);
             panel2.TabIndex = 2;
             panel2.MouseDown += panel2_MouseDown;
             // 
@@ -235,8 +237,9 @@
             pictureBox1.Dock = DockStyle.Top;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(230, 198);
+            pictureBox1.Size = new Size(201, 175);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -258,9 +261,11 @@
             groupBox1.Controls.Add(btnClientes);
             groupBox1.Controls.Add(btnDashboard);
             groupBox1.FlatStyle = FlatStyle.Flat;
-            groupBox1.Location = new Point(0, 204);
+            groupBox1.Location = new Point(0, 179);
+            groupBox1.Margin = new Padding(3, 2, 3, 2);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(230, 296);
+            groupBox1.Padding = new Padding(3, 2, 3, 2);
+            groupBox1.Size = new Size(201, 223);
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
             groupBox1.Enter += groupBox1_Enter;
@@ -268,10 +273,9 @@
             // pictureBox10
             // 
             pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
-            pictureBox10.Location = new Point(10, 229);
-            pictureBox10.Margin = new Padding(3, 4, 3, 4);
+            pictureBox10.Location = new Point(9, 172);
             pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(40, 40);
+            pictureBox10.Size = new Size(35, 30);
             pictureBox10.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox10.TabIndex = 14;
             pictureBox10.TabStop = false;
@@ -287,9 +291,10 @@
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
             button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(7, 221);
+            button2.Location = new Point(6, 166);
+            button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(218, 48);
+            button2.Size = new Size(191, 36);
             button2.TabIndex = 6;
             button2.Text = "VACACIONES";
             button2.TextAlign = ContentAlignment.MiddleRight;
@@ -299,10 +304,9 @@
             // pictureBox9
             // 
             pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
-            pictureBox9.Location = new Point(9, 28);
-            pictureBox9.Margin = new Padding(3, 4, 3, 4);
+            pictureBox9.Location = new Point(8, 21);
             pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(40, 40);
+            pictureBox9.Size = new Size(35, 30);
             pictureBox9.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox9.TabIndex = 13;
             pictureBox9.TabStop = false;
@@ -310,10 +314,9 @@
             // pictureBox8
             // 
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(10, 184);
-            pictureBox8.Margin = new Padding(3, 4, 3, 4);
+            pictureBox8.Location = new Point(9, 138);
             pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(40, 40);
+            pictureBox8.Size = new Size(35, 30);
             pictureBox8.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox8.TabIndex = 12;
             pictureBox8.TabStop = false;
@@ -329,9 +332,10 @@
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(7, 183);
+            button1.Location = new Point(6, 137);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(218, 48);
+            button1.Size = new Size(191, 36);
             button1.TabIndex = 11;
             button1.Text = "EMPLEADOS";
             button1.TextAlign = ContentAlignment.MiddleRight;
@@ -341,10 +345,9 @@
             // pictureBox7
             // 
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(10, 80);
-            pictureBox7.Margin = new Padding(3, 4, 3, 4);
+            pictureBox7.Location = new Point(9, 60);
             pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(40, 40);
+            pictureBox7.Size = new Size(35, 30);
             pictureBox7.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox7.TabIndex = 10;
             pictureBox7.TabStop = false;
@@ -352,10 +355,9 @@
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(10, 136);
-            pictureBox6.Margin = new Padding(3, 4, 3, 4);
+            pictureBox6.Location = new Point(9, 102);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(40, 40);
+            pictureBox6.Size = new Size(35, 30);
             pictureBox6.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox6.TabIndex = 9;
             pictureBox6.TabStop = false;
@@ -371,9 +373,10 @@
             btnCiudades.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnCiudades.ForeColor = Color.White;
             btnCiudades.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCiudades.Location = new Point(230, 193);
+            btnCiudades.Location = new Point(201, 145);
+            btnCiudades.Margin = new Padding(3, 2, 3, 2);
             btnCiudades.Name = "btnCiudades";
-            btnCiudades.Size = new Size(218, 48);
+            btnCiudades.Size = new Size(191, 36);
             btnCiudades.TabIndex = 8;
             btnCiudades.Text = "CIUDADES";
             btnCiudades.TextAlign = ContentAlignment.MiddleRight;
@@ -390,9 +393,10 @@
             btnProfesionales.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnProfesionales.ForeColor = Color.White;
             btnProfesionales.ImageAlign = ContentAlignment.MiddleLeft;
-            btnProfesionales.Location = new Point(10, 137);
+            btnProfesionales.Location = new Point(9, 103);
+            btnProfesionales.Margin = new Padding(3, 2, 3, 2);
             btnProfesionales.Name = "btnProfesionales";
-            btnProfesionales.Size = new Size(218, 48);
+            btnProfesionales.Size = new Size(191, 36);
             btnProfesionales.TabIndex = 7;
             btnProfesionales.Text = "DOCTORES";
             btnProfesionales.TextAlign = ContentAlignment.MiddleRight;
@@ -410,9 +414,10 @@
             btnClientes.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnClientes.ForeColor = Color.White;
             btnClientes.ImageAlign = ContentAlignment.MiddleLeft;
-            btnClientes.Location = new Point(8, 81);
+            btnClientes.Location = new Point(7, 61);
+            btnClientes.Margin = new Padding(3, 2, 3, 2);
             btnClientes.Name = "btnClientes";
-            btnClientes.Size = new Size(218, 48);
+            btnClientes.Size = new Size(191, 36);
             btnClientes.TabIndex = 6;
             btnClientes.Text = "PACIENTES";
             btnClientes.TextAlign = ContentAlignment.MiddleRight;
@@ -430,9 +435,10 @@
             btnDashboard.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnDashboard.ForeColor = Color.White;
             btnDashboard.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDashboard.Location = new Point(10, 25);
+            btnDashboard.Location = new Point(9, 19);
+            btnDashboard.Margin = new Padding(3, 2, 3, 2);
             btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(218, 48);
+            btnDashboard.Size = new Size(191, 36);
             btnDashboard.TabIndex = 5;
             btnDashboard.Text = "CONSULTAS";
             btnDashboard.TextAlign = ContentAlignment.MiddleRight;
@@ -441,12 +447,11 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1257, 1051);
+            ClientSize = new Size(1100, 788);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
