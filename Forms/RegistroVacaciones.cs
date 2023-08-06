@@ -39,5 +39,10 @@ namespace Forms
            /* if(result == 1) { MessageBox.Show("Se ha agregado el periodo de vaciones correctamente"); }
             else { MessageBox.Show("Ha ocurrido un error"); }*/
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

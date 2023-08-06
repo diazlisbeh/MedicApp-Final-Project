@@ -153,6 +153,11 @@ namespace Forms
             OpenFormulary<vacaciones>();
         }
 
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         //Method to open formularies within the panel
         private void OpenFormulary<Myform>() where Myform : Form, new()
         {

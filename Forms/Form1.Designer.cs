@@ -80,7 +80,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(960, 480);
+            panel1.Size = new Size(1100, 788);
             panel1.TabIndex = 0;
             panel1.MouseDown += panel1_MouseDown;
             // 
@@ -89,10 +89,10 @@
             panel4.AllowDrop = true;
             panel4.BackColor = Color.FromArgb(55, 61, 69);
             panel4.Dock = DockStyle.Bottom;
-            panel4.Location = new Point(201, 442);
+            panel4.Location = new Point(201, 750);
             panel4.Margin = new Padding(3, 2, 3, 2);
             panel4.Name = "panel4";
-            panel4.Size = new Size(759, 38);
+            panel4.Size = new Size(899, 38);
             panel4.TabIndex = 5;
             panel4.MouseDown += panel4_MouseDown;
             // 
@@ -101,10 +101,10 @@
             panel5.AllowDrop = true;
             panel5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel5.BackColor = Color.FromArgb(64, 69, 76);
-            panel5.Location = new Point(203, 60);
+            panel5.Location = new Point(203, 65);
             panel5.Margin = new Padding(3, 2, 3, 2);
             panel5.Name = "panel5";
-            panel5.Size = new Size(757, 378);
+            panel5.Size = new Size(894, 681);
             panel5.TabIndex = 4;
             panel5.Paint += panel5_Paint;
             panel5.MouseDown += panel5_MouseDown;
@@ -124,8 +124,9 @@
             panel3.Location = new Point(201, 0);
             panel3.Margin = new Padding(3, 2, 3, 2);
             panel3.Name = "panel3";
-            panel3.Size = new Size(759, 61);
+            panel3.Size = new Size(899, 61);
             panel3.TabIndex = 3;
+            panel3.Paint += panel3_Paint;
             panel3.MouseDown += panel3_MouseDown;
             // 
             // pictureBox5
@@ -179,7 +180,7 @@
             btnMini.Cursor = Cursors.Hand;
             btnMini.FlatAppearance.BorderSize = 0;
             btnMini.FlatStyle = FlatStyle.Flat;
-            btnMini.Location = new Point(1096, 18);
+            btnMini.Location = new Point(1236, 18);
             btnMini.Margin = new Padding(3, 2, 3, 2);
             btnMini.Name = "btnMini";
             btnMini.Size = new Size(21, 1);
@@ -194,7 +195,7 @@
             btnMaxi.Cursor = Cursors.Hand;
             btnMaxi.FlatAppearance.BorderSize = 0;
             btnMaxi.FlatStyle = FlatStyle.Flat;
-            btnMaxi.Location = new Point(1123, 18);
+            btnMaxi.Location = new Point(1263, 18);
             btnMaxi.Margin = new Padding(3, 2, 3, 2);
             btnMaxi.Name = "btnMaxi";
             btnMaxi.Size = new Size(21, 1);
@@ -209,7 +210,7 @@
             btnCerrar.Cursor = Cursors.Hand;
             btnCerrar.FlatAppearance.BorderSize = 0;
             btnCerrar.FlatStyle = FlatStyle.Flat;
-            btnCerrar.Location = new Point(1151, 18);
+            btnCerrar.Location = new Point(1291, 18);
             btnCerrar.Margin = new Padding(3, 2, 3, 2);
             btnCerrar.Name = "btnCerrar";
             btnCerrar.Size = new Size(21, 1);
@@ -226,7 +227,7 @@
             panel2.Location = new Point(0, 0);
             panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(201, 480);
+            panel2.Size = new Size(201, 788);
             panel2.TabIndex = 2;
             panel2.MouseDown += panel2_MouseDown;
             // 
@@ -445,7 +446,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(960, 480);
+            ClientSize = new Size(1100, 788);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";

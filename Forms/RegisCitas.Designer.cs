@@ -83,6 +83,7 @@
             button3.TabIndex = 23;
             button3.Text = "Cerrar";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
