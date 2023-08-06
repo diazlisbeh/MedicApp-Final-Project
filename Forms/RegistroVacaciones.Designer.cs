@@ -99,6 +99,7 @@
             button1.TabIndex = 27;
             button1.Text = "Guardar ";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -145,7 +146,7 @@
             label4.Text = "Fecha fin ";
             label4.Click += label4_Click;
             // 
-            // Form4
+            // RegistroVacaciones
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
