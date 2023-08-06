@@ -158,6 +158,16 @@ namespace Forms
 
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
         //Method to open formularies within the panel
         private void OpenFormulary<Myform>() where Myform : Form, new()
         {
