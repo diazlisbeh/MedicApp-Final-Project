@@ -90,6 +90,7 @@
             button3.TabIndex = 23;
             button3.Text = "Cerrar";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -119,6 +120,7 @@
             button1.TabIndex = 19;
             button1.Text = "Cancelar";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // textBox7
             // 

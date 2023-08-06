@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLogic;
+using DataAccess;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,9 +34,33 @@ namespace Forms
 
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private async void button2_Click_1(object sender, EventArgs e)
         {
+            var paciente = new pacientes();
+            var service = new PacienteServices();
 
+            paciente.Nombre = textBox1.Text;
+            paciente.Direccion = textBox2.Text;
+            paciente.Telefono = textBox3.Text;
+            paciente.Codigo_Postal = int.Parse(textBox4.Text);
+            paciente.NIF = int.Parse(textBox5.Text);
+            paciente.Numero_de_seguridad_social = textBox6.Text;
+            paciente.Medico_ID = int.Parse(textBox7.Text);
+
+            int result = await service.AddPaciente(paciente);
+
+            if (result == 1) { MessageBox.Show("Se ha agregado el paciente correctamente"); }
+            else { MessageBox.Show("Ha ocurrido un error"); }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -64,6 +64,7 @@
             button3.TabIndex = 24;
             button3.Text = "Cerrar";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -99,6 +100,7 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(628, 178);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Form4
             // 
@@ -108,6 +110,7 @@
             Controls.Add(panel1);
             Name = "Form4";
             Text = "Form4";
+            Load += Form4_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLogic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -49,6 +50,23 @@ namespace Forms
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private async void Form4_Load(object sender, EventArgs e)
+        {
+            var service = new PacienteServices();
+            var pacientes = await service.GetPacientes();
+            this.dataGridView1.DataSource = pacientes;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

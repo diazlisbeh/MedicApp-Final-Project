@@ -101,6 +101,7 @@
             button3.TabIndex = 49;
             button3.Text = "Cancelar ";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLogic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,6 +45,13 @@ namespace Forms
         private void button2_Click(object sender, EventArgs e)
         {
             OpenFormulary<FormEmpleados>();
+        }
+
+        private async void Viewemplo_Load(object sender, EventArgs e)
+        {
+            var service = new EmpleadosService();
+            var empleados = await service.GetEmpleados();
+            this.dataGridView1.DataSource = empleados;
         }
     }
 }

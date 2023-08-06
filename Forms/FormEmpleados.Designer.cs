@@ -98,6 +98,7 @@
             button3.TabIndex = 24;
             button3.Text = "Guardar";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -112,15 +113,18 @@
             button2.TabIndex = 23;
             button2.Text = "Cerrar";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // comboBox1
             // 
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Administrador", "ATS", "ATS de Zona", "Auxiliares de emfermeria", "Celadores" });
             comboBox1.Location = new Point(742, 264);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(157, 23);
             comboBox1.TabIndex = 22;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // label8
             // 
