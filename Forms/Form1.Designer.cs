@@ -33,6 +33,8 @@
             panel4 = new Panel();
             panel5 = new Panel();
             panel3 = new Panel();
+            panel6 = new Panel();
+            FormHeadFlowPanel = new FlowLayoutPanel();
             pictureBox5 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
@@ -56,6 +58,8 @@
             btnDashboard = new Button();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
+            panel6.SuspendLayout();
+            FormHeadFlowPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -80,7 +84,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1100, 788);
+            panel1.Size = new Size(1100, 600);
             panel1.TabIndex = 0;
             panel1.MouseDown += panel1_MouseDown;
             // 
@@ -89,7 +93,7 @@
             panel4.AllowDrop = true;
             panel4.BackColor = Color.FromArgb(55, 61, 69);
             panel4.Dock = DockStyle.Bottom;
-            panel4.Location = new Point(201, 750);
+            panel4.Location = new Point(201, 562);
             panel4.Margin = new Padding(3, 2, 3, 2);
             panel4.Name = "panel4";
             panel4.Size = new Size(899, 38);
@@ -104,7 +108,7 @@
             panel5.Location = new Point(201, 61);
             panel5.Margin = new Padding(3, 2, 3, 2);
             panel5.Name = "panel5";
-            panel5.Size = new Size(899, 727);
+            panel5.Size = new Size(899, 539);
             panel5.TabIndex = 4;
             panel5.Paint += panel5_Paint;
             panel5.MouseDown += panel5_MouseDown;
@@ -113,9 +117,7 @@
             // 
             panel3.AllowDrop = true;
             panel3.BackColor = Color.FromArgb(128, 255, 255);
-            panel3.Controls.Add(pictureBox5);
-            panel3.Controls.Add(pictureBox4);
-            panel3.Controls.Add(pictureBox3);
+            panel3.Controls.Add(panel6);
             panel3.Controls.Add(pictureBox2);
             panel3.Controls.Add(btnMini);
             panel3.Controls.Add(btnMaxi);
@@ -129,36 +131,60 @@
             panel3.Paint += panel3_Paint;
             panel3.MouseDown += panel3_MouseDown;
             // 
+            // panel6
+            // 
+            panel6.Controls.Add(FormHeadFlowPanel);
+            panel6.Dock = DockStyle.Right;
+            panel6.Location = new Point(817, 0);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(82, 61);
+            panel6.TabIndex = 4;
+            // 
+            // FormHeadFlowPanel
+            // 
+            FormHeadFlowPanel.Controls.Add(pictureBox5);
+            FormHeadFlowPanel.Controls.Add(pictureBox4);
+            FormHeadFlowPanel.Controls.Add(pictureBox3);
+            FormHeadFlowPanel.Dock = DockStyle.Bottom;
+            FormHeadFlowPanel.FlowDirection = FlowDirection.RightToLeft;
+            FormHeadFlowPanel.Location = new Point(0, 21);
+            FormHeadFlowPanel.Name = "FormHeadFlowPanel";
+            FormHeadFlowPanel.Size = new Size(82, 40);
+            FormHeadFlowPanel.TabIndex = 0;
+            // 
             // pictureBox5
             // 
+            pictureBox5.Cursor = Cursors.Hand;
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(715, 15);
+            pictureBox5.Location = new Point(58, 3);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(21, 18);
             pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 6;
+            pictureBox5.TabIndex = 15;
             pictureBox5.TabStop = false;
             pictureBox5.Click += pictureBox5_Click;
             // 
             // pictureBox4
             // 
+            pictureBox4.Cursor = Cursors.Hand;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(674, 15);
+            pictureBox4.Location = new Point(31, 3);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(21, 18);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 5;
+            pictureBox4.TabIndex = 14;
             pictureBox4.TabStop = false;
             pictureBox4.Click += pictureBox4_Click;
             // 
             // pictureBox3
             // 
+            pictureBox3.Cursor = Cursors.Hand;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(633, 15);
+            pictureBox3.Location = new Point(4, 3);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(21, 18);
             pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 4;
+            pictureBox3.TabIndex = 13;
             pictureBox3.TabStop = false;
             pictureBox3.Click += pictureBox3_Click;
             // 
@@ -227,7 +253,7 @@
             panel2.Location = new Point(0, 0);
             panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(201, 788);
+            panel2.Size = new Size(201, 600);
             panel2.TabIndex = 2;
             panel2.MouseDown += panel2_MouseDown;
             // 
@@ -449,7 +475,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1100, 788);
+            ClientSize = new Size(1100, 600);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";
@@ -459,6 +485,8 @@
             MouseDown += Form1_MouseDown;
             panel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
+            panel6.ResumeLayout(false);
+            FormHeadFlowPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -489,10 +517,7 @@
         private Button btnProfesionales;
         private Button btnClientes;
         private Button btnDashboard;
-        private PictureBox pictureBox3;
         private PictureBox pictureBox2;
-        private PictureBox pictureBox5;
-        private PictureBox pictureBox4;
         private Panel panel4;
         private Panel panel5;
         private PictureBox pictureBox7;
@@ -502,5 +527,10 @@
         private PictureBox pictureBox9;
         private Button button2;
         private PictureBox pictureBox10;
+        private Panel panel6;
+        private FlowLayoutPanel FormHeadFlowPanel;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox3;
     }
 }

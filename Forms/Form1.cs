@@ -168,6 +168,16 @@ namespace Forms
 
         }
 
+        /*private void pictureBox5_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox5.BackColor = Color.Red;
+        }
+
+        private void pictureBox5_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox5.BackColor = default;
+        }*/
+
         //Method to open formularies within the panel
         private void OpenFormulary<Myform>() where Myform : Form, new()
         {
