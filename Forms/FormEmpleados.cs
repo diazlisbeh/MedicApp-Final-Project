@@ -20,11 +20,6 @@ namespace Forms
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private async void button3_Click(object sender, EventArgs e)
         {
             var empleado = new empleados();
@@ -35,14 +30,12 @@ namespace Forms
             empleado.Telefono = textBox3.Text;
             empleado.Poblacion = textBox4.Text;
             empleado.Provincia = textBox5.Text;
-            empleado.Codigo_Postal = int.Parse(textBox6.Text);
-            empleado.NIF = int.Parse(textBox9.Text);
+            empleado.Codigo_Postal = Convert.ToInt32(numericUpDown1.Value);
+            empleado.NIF = Convert.ToInt32(numericUpDown2.Value);
             empleado.Numero_de_seguridad_social = textBox8.Text;
             empleado.Tipo_empleado = comboBox1.SelectedIndex + 1;
 
             int result = await service.AddEmpleado(empleado);
-
-
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -55,6 +48,11 @@ namespace Forms
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void FormEmpleados_Load(object sender, EventArgs e)
+        {
+            //comboBox1.DataContext = this;
         }
     }
 }

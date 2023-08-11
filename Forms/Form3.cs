@@ -59,9 +59,9 @@ namespace Forms
             doctor.Telefono = textBox3.Text;
             doctor.Poblacion = textBox4.Text;
             doctor.Provincia = textBox5.Text;
-            doctor.Codigo_Postal = int.Parse(textBox7.Text);
+            doctor.Codigo_Postal = Convert.ToInt32(numericUpDown1.Value);
             doctor.Tipo = textBox9.Text;
-            doctor.NIF = int.Parse(textBox8.Text);
+            doctor.NIF = Convert.ToInt32(numericUpDown2.Value);
             doctor.Numero_de_colegiado = textBox10.Text;
             doctor.Numero_de_seguridad_social = textBox11.Text;
 
@@ -69,6 +69,11 @@ namespace Forms
 
             if (result == 0) { MessageBox.Show("Ha ocurrido un Error."); }
             else { MessageBox.Show("Se ha agregado el Medico exitosamente"); }
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

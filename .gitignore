@@ -625,3 +625,15 @@ $RECYCLE.BIN/
 /BusinessLogic/obj/project.assets.json
 /BusinessLogic/obj/project.nuget.cache
 /BusinessLogic/bin/Debug/net7.0/BusinessLogic.dll
+/BusinessLogic/bin/Debug/net7.0/BusinessLogic.pdb
+/BusinessLogic/bin/Debug/net7.0/DataAccess.dll
+/BusinessLogic/bin/Debug/net7.0/DataAccess.pdb
+/BusinessLogic/obj/Debug/net7.0/BusinessLogic.dll
+/BusinessLogic/obj/Debug/net7.0/BusinessLogic.pdb
+/DataAccess/bin/Debug/net7.0/DataAccess.dll
+/DataAccess/bin/Debug/net7.0/DataAccess.pdb
+/DataAccess/bin/Debug/net7.0/database.db
+/DataAccess/obj/Debug/net7.0/ref/DataAccess.dll
+/DataAccess/obj/Debug/net7.0/DataAccess.dll
+/DataAccess/obj/Debug/net7.0/DataAccess.pdb
+/DataAccess/obj/Debug/net7.0/refint/DataAccess.dll

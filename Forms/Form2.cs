@@ -14,6 +14,8 @@ namespace Forms
 {
     public partial class Form2 : Form
     {
+        static pacientes paciente = new pacientes();
+        static PacienteServices service = new PacienteServices();
         public Form2()
         {
             InitializeComponent();
@@ -36,16 +38,15 @@ namespace Forms
 
         private async void button2_Click_1(object sender, EventArgs e)
         {
-            var paciente = new pacientes();
-            var service = new PacienteServices();
+
 
             paciente.Nombre = textBox1.Text;
             paciente.Direccion = textBox2.Text;
             paciente.Telefono = textBox3.Text;
-            paciente.Codigo_Postal = int.Parse(textBox4.Text);
-            paciente.NIF = int.Parse(textBox5.Text);
+            paciente.Codigo_Postal = Convert.ToInt32(numericUpDown1.Value);
+            paciente.NIF = Convert.ToInt32(numericUpDown2.Value);
             paciente.Numero_de_seguridad_social = textBox6.Text;
-            paciente.Medico_ID = int.Parse(textBox7.Text);
+            paciente.Medico_ID = int.Parse(comboBox1.Text);
 
             int result = await service.AddPaciente(paciente);
 
@@ -61,6 +62,11 @@ namespace Forms
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private async void Form2_Load(object sender, EventArgs e)
+        {
+            //comboBox1.DataSource = await service.GetPacientes();
         }
     }
 }

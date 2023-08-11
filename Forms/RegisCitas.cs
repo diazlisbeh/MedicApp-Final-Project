@@ -17,14 +17,21 @@ namespace Forms
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void RegisCitas_Load(object sender, EventArgs e)
         {
-            this.Close();
+            // Con esto, el campo de dia de la semana se puede llenar sin necesidad de un textbox/combobox
+            string dia = dateTimePicker1.Value.DayOfWeek.ToString();
+            dateTimePicker1.Value = DateTime.Today;
         }
     }
 }

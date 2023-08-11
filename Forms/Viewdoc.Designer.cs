@@ -33,6 +33,7 @@
             button2 = new Button();
             label1 = new Label();
             dataGridView1 = new DataGridView();
+            panel2 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -40,6 +41,7 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(64, 69, 76);
+            panel1.Controls.Add(panel2);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(label1);
@@ -47,7 +49,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(944, 441);
+            panel1.Size = new Size(883, 500);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
@@ -102,11 +104,18 @@
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
+            // panel2
+            // 
+            panel2.Location = new Point(12, 295);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(859, 193);
+            panel2.TabIndex = 25;
+            // 
             // Viewdoc
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(944, 441);
+            ClientSize = new Size(883, 500);
             Controls.Add(panel1);
             Name = "Viewdoc";
             Text = "Viewdoc";
@@ -125,5 +134,6 @@
         private Label label1;
         private Button button2;
         private Button button3;
+        private Panel panel2;
     }
 }
