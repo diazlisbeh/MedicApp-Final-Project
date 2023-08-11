@@ -18,6 +18,8 @@ namespace Forms
         public Form2()
         {
             InitializeComponent();
+            numericUpDown1.Maximum = int.MaxValue - 1;
+            numericUpDown2.Maximum = int.MaxValue - 1;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -30,11 +32,6 @@ namespace Forms
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private async void button2_Click_1(object sender, EventArgs e)
         {
             var paciente = new pacientes();
@@ -43,8 +40,8 @@ namespace Forms
             paciente.Nombre = textBox1.Text;
             paciente.Direccion = textBox2.Text;
             paciente.Telefono = textBox3.Text;
-            paciente.Codigo_Postal = int.Parse(textBox4.Text);
-            paciente.NIF = int.Parse(textBox5.Text);
+            paciente.Codigo_Postal = (int)numericUpDown1.Value;
+            paciente.NIF = (int)numericUpDown2.Value;
             paciente.Numero_de_seguridad_social = textBox6.Text;
             paciente.Medico_ID = selected.ID;
 
@@ -52,6 +49,8 @@ namespace Forms
 
             if (result == 1) { MessageBox.Show("Se ha agregado el paciente correctamente"); }
             else { MessageBox.Show("Ha ocurrido un error"); }
+
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -73,18 +72,18 @@ namespace Forms
         {
             var service = new MedicosService();
             var item = await service.GetMedicos();
-           /* comboBox1.DataSource = item.Select(p => new MedicoItem
-            {
-                Id = p.ID,
-                Nombre = p.Nombre
-            }).ToList();*/
+            /* comboBox1.DataSource = item.Select(p => new MedicoItem
+             {
+                 Id = p.ID,
+                 Nombre = p.Nombre
+             }).ToList();*/
 
-            foreach(var i in item)
+            foreach (var i in item)
             {
                 comboBox1.Items.Add(i);
             }
             comboBox1.DisplayMember = "Nombre";
-            
+
         }
     }
 }

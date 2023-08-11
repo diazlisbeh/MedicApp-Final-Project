@@ -39,6 +39,7 @@ namespace Forms
             }
             comboBox1.DisplayMember = "Nombre";
 
+            comboBox2.SelectedIndex = 0;
 
             var servicePaciente = new PacienteServices();
             var itemsPacientes = await servicePaciente.GetPacientes();
@@ -61,7 +62,7 @@ namespace Forms
             consulta.Medico_ID = medicoId.ID;
             consulta.Dia_de_Semana = comboBox2.SelectedItem.ToString();
             consulta.Fecha = dateTimePicker1.Value;
-            consulta.Hora_inicio = TimeOnly.Parse (dateTimePicker4.Value.ToShortTimeString());
+            consulta.Hora_inicio = TimeOnly.Parse(dateTimePicker4.Value.ToShortTimeString());
             consulta.Hora_fin = TimeOnly.Parse(dateTimePicker3.Value.ToShortTimeString());
 
             int res = await service.AddConsulta(consulta);
@@ -70,13 +71,8 @@ namespace Forms
                 MessageBox.Show("Se ha agregado la consulta correctamente");
                 this.Close();
             }
-            if(res == 0)MessageBox.Show("Ha ocurrido un error al agregar su consulta");
+            if (res == 0) MessageBox.Show("Ha ocurrido un error al agregar su consulta");
 
-           
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
 
         }
     }

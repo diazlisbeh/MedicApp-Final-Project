@@ -17,26 +17,8 @@ namespace Forms
         public Form3()
         {
             InitializeComponent();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
+            numericUpDown1.Maximum = int.MaxValue - 1;
+            numericUpDown2.Maximum = int.MaxValue - 1;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -59,9 +41,9 @@ namespace Forms
             doctor.Telefono = textBox3.Text;
             doctor.Poblacion = textBox4.Text;
             doctor.Provincia = textBox5.Text;
-            doctor.Codigo_Postal = int.Parse(textBox7.Text);
+            doctor.Codigo_Postal = (int)numericUpDown1.Value;
             doctor.Tipo = textBox9.Text;
-            doctor.NIF = int.Parse(textBox8.Text);
+            doctor.NIF = (int)numericUpDown2.Value;
             doctor.Numero_de_colegiado = textBox10.Text;
             doctor.Numero_de_seguridad_social = textBox11.Text;
 

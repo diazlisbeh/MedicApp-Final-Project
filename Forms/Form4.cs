@@ -39,6 +39,7 @@ namespace Forms
             else
             {
                 formulary.BringToFront();
+                formulary.Refresh();
             }
         }
 
@@ -68,5 +69,7 @@ namespace Forms
         {
             this.Close();
         }
+
+        //public static void REFRESH() { dataGridView1.Refresh();}
     }
 }

@@ -63,7 +63,7 @@ namespace Forms
             var service = new ConsultasService();
             var consultas = await service.GetConsultas();
             dataGridView1.DataSource = consultas;
-            
+
         }
     }
 }

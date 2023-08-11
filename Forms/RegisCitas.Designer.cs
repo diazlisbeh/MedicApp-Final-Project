@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            label7 = new Label();
+            comboBox3 = new ComboBox();
             comboBox2 = new ComboBox();
             dateTimePicker4 = new DateTimePicker();
             dateTimePicker3 = new DateTimePicker();
@@ -42,8 +44,6 @@
             label3 = new Label();
             label2 = new Label();
             label1 = new Label();
-            comboBox3 = new ComboBox();
-            label7 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -68,15 +68,33 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(944, 441);
+            panel1.Size = new Size(883, 500);
             panel1.TabIndex = 1;
-            panel1.Paint += panel1_Paint;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(560, 55);
+            label7.Name = "label7";
+            label7.Size = new Size(67, 21);
+            label7.TabIndex = 31;
+            label7.Text = "Paciente";
+            // 
+            // comboBox3
+            // 
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(560, 79);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(121, 23);
+            comboBox3.TabIndex = 30;
             // 
             // comboBox2
             // 
             comboBox2.FormattingEnabled = true;
             comboBox2.Items.AddRange(new object[] { "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo" });
-            comboBox2.Location = new Point(19, 269);
+            comboBox2.Location = new Point(181, 272);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(121, 23);
             comboBox2.TabIndex = 29;
@@ -84,7 +102,7 @@
             // dateTimePicker4
             // 
             dateTimePicker4.Format = DateTimePickerFormat.Time;
-            dateTimePicker4.Location = new Point(398, 168);
+            dateTimePicker4.Location = new Point(560, 171);
             dateTimePicker4.Name = "dateTimePicker4";
             dateTimePicker4.Size = new Size(121, 23);
             dateTimePicker4.TabIndex = 28;
@@ -92,7 +110,7 @@
             // dateTimePicker3
             // 
             dateTimePicker3.Format = DateTimePickerFormat.Time;
-            dateTimePicker3.Location = new Point(398, 269);
+            dateTimePicker3.Location = new Point(560, 272);
             dateTimePicker3.Name = "dateTimePicker3";
             dateTimePicker3.Size = new Size(121, 23);
             dateTimePicker3.TabIndex = 27;
@@ -100,7 +118,7 @@
             // dateTimePicker1
             // 
             dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(19, 168);
+            dateTimePicker1.Location = new Point(181, 171);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(121, 23);
             dateTimePicker1.TabIndex = 25;
@@ -108,7 +126,7 @@
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(19, 76);
+            comboBox1.Location = new Point(181, 79);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(121, 23);
             comboBox1.TabIndex = 24;
@@ -120,7 +138,7 @@
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button3.ForeColor = Color.White;
-            button3.Location = new Point(511, 352);
+            button3.Location = new Point(540, 375);
             button3.Name = "button3";
             button3.Size = new Size(86, 33);
             button3.TabIndex = 23;
@@ -135,7 +153,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(187, 352);
+            button2.Location = new Point(248, 375);
             button2.Name = "button2";
             button2.Size = new Size(86, 33);
             button2.TabIndex = 22;
@@ -148,7 +166,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(398, 245);
+            label6.Location = new Point(560, 248);
             label6.Name = "label6";
             label6.Size = new Size(66, 21);
             label6.TabIndex = 13;
@@ -159,7 +177,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(398, 144);
+            label5.Location = new Point(560, 147);
             label5.Name = "label5";
             label5.Size = new Size(85, 21);
             label5.TabIndex = 11;
@@ -170,7 +188,7 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(19, 245);
+            label4.Location = new Point(181, 248);
             label4.Name = "label4";
             label4.Size = new Size(128, 21);
             label4.TabIndex = 5;
@@ -181,7 +199,7 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.White;
-            label3.Location = new Point(26, 144);
+            label3.Location = new Point(188, 147);
             label3.Name = "label3";
             label3.Size = new Size(50, 21);
             label3.TabIndex = 4;
@@ -192,7 +210,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(26, 52);
+            label2.Location = new Point(188, 55);
             label2.Name = "label2";
             label2.Size = new Size(80, 21);
             label2.TabIndex = 2;
@@ -203,37 +221,17 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(360, 9);
+            label1.Location = new Point(342, 9);
             label1.Name = "label1";
             label1.Size = new Size(205, 21);
             label1.TabIndex = 0;
             label1.Text = "REGISTRO DE CONSULTAS";
             // 
-            // comboBox3
-            // 
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(398, 76);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(121, 23);
-            comboBox3.TabIndex = 30;
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.ForeColor = Color.White;
-            label7.Location = new Point(398, 52);
-            label7.Name = "label7";
-            label7.Size = new Size(67, 21);
-            label7.TabIndex = 31;
-            label7.Text = "Paciente";
-            label7.Click += label7_Click;
-            // 
             // RegisCitas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(944, 441);
+            ClientSize = new Size(883, 500);
             Controls.Add(panel1);
             Name = "RegisCitas";
             Text = "RegisCitas";

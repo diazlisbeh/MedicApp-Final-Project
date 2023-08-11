@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            numericUpDown2 = new NumericUpDown();
+            numericUpDown1 = new NumericUpDown();
             button2 = new Button();
             button1 = new Button();
             label12 = new Label();
@@ -37,9 +39,7 @@
             textBox11 = new TextBox();
             textBox10 = new TextBox();
             textBox9 = new TextBox();
-            textBox8 = new TextBox();
             label9 = new Label();
-            textBox7 = new TextBox();
             label8 = new Label();
             textBox5 = new TextBox();
             label6 = new Label();
@@ -53,10 +53,14 @@
             textBox1 = new TextBox();
             label1 = new Label();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(numericUpDown2);
+            panel1.Controls.Add(numericUpDown1);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(label12);
@@ -65,9 +69,7 @@
             panel1.Controls.Add(textBox11);
             panel1.Controls.Add(textBox10);
             panel1.Controls.Add(textBox9);
-            panel1.Controls.Add(textBox8);
             panel1.Controls.Add(label9);
-            panel1.Controls.Add(textBox7);
             panel1.Controls.Add(label8);
             panel1.Controls.Add(textBox5);
             panel1.Controls.Add(label6);
@@ -83,8 +85,22 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(818, 441);
+            panel1.Size = new Size(883, 500);
             panel1.TabIndex = 0;
+            // 
+            // numericUpDown2
+            // 
+            numericUpDown2.Location = new Point(372, 311);
+            numericUpDown2.Name = "numericUpDown2";
+            numericUpDown2.Size = new Size(139, 23);
+            numericUpDown2.TabIndex = 49;
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(12, 311);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(120, 23);
+            numericUpDown1.TabIndex = 1;
             // 
             // button2
             // 
@@ -93,7 +109,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(494, 382);
+            button2.Location = new Point(540, 395);
             button2.Name = "button2";
             button2.Size = new Size(86, 33);
             button2.TabIndex = 48;
@@ -108,19 +124,20 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button1.ForeColor = Color.White;
-            button1.Location = new Point(187, 382);
+            button1.Location = new Point(247, 395);
             button1.Name = "button1";
             button1.Size = new Size(86, 33);
             button1.TabIndex = 47;
             button1.Text = "Guardar ";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label12
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label12.ForeColor = Color.White;
-            label12.Location = new Point(323, 210);
+            label12.Location = new Point(372, 210);
             label12.Name = "label12";
             label12.Size = new Size(40, 21);
             label12.TabIndex = 46;
@@ -131,7 +148,7 @@
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label11.ForeColor = Color.White;
-            label11.Location = new Point(589, 139);
+            label11.Location = new Point(653, 139);
             label11.Name = "label11";
             label11.Size = new Size(163, 21);
             label11.TabIndex = 45;
@@ -142,7 +159,7 @@
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label10.ForeColor = Color.White;
-            label10.Location = new Point(589, 59);
+            label10.Location = new Point(653, 59);
             label10.Name = "label10";
             label10.Size = new Size(209, 21);
             label10.TabIndex = 44;
@@ -150,49 +167,35 @@
             // 
             // textBox11
             // 
-            textBox11.Location = new Point(589, 83);
+            textBox11.Location = new Point(653, 83);
             textBox11.Name = "textBox11";
             textBox11.Size = new Size(160, 23);
             textBox11.TabIndex = 43;
             // 
             // textBox10
             // 
-            textBox10.Location = new Point(589, 162);
+            textBox10.Location = new Point(653, 162);
             textBox10.Name = "textBox10";
             textBox10.Size = new Size(160, 23);
             textBox10.TabIndex = 42;
             // 
             // textBox9
             // 
-            textBox9.Location = new Point(323, 234);
+            textBox9.Location = new Point(372, 234);
             textBox9.Name = "textBox9";
             textBox9.Size = new Size(139, 23);
             textBox9.TabIndex = 41;
-            // 
-            // textBox8
-            // 
-            textBox8.Location = new Point(323, 311);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(139, 23);
-            textBox8.TabIndex = 40;
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label9.ForeColor = Color.White;
-            label9.Location = new Point(323, 287);
+            label9.Location = new Point(372, 287);
             label9.Name = "label9";
             label9.Size = new Size(34, 21);
             label9.TabIndex = 39;
             label9.Text = "NIF";
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(12, 311);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(100, 23);
-            textBox7.TabIndex = 38;
             // 
             // label8
             // 
@@ -207,7 +210,7 @@
             // 
             // textBox5
             // 
-            textBox5.Location = new Point(323, 162);
+            textBox5.Location = new Point(372, 162);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(139, 23);
             textBox5.TabIndex = 36;
@@ -217,7 +220,7 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(323, 138);
+            label6.Location = new Point(372, 138);
             label6.Name = "label6";
             label6.Size = new Size(74, 21);
             label6.TabIndex = 35;
@@ -228,7 +231,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(319, 59);
+            label5.Location = new Point(368, 59);
             label5.Name = "label5";
             label5.Size = new Size(77, 21);
             label5.TabIndex = 34;
@@ -236,7 +239,7 @@
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(323, 83);
+            textBox4.Location = new Point(372, 83);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(139, 23);
             textBox4.TabIndex = 33;
@@ -298,11 +301,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(285, 15);
+            label1.Location = new Point(346, 9);
             label1.Name = "label1";
-            label1.Size = new Size(208, 21);
+            label1.Size = new Size(200, 21);
             label1.TabIndex = 26;
             label1.Text = "REGISTRO DE DOCTORES ";
             // 
@@ -311,12 +314,14 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(64, 69, 76);
-            ClientSize = new Size(818, 441);
+            ClientSize = new Size(883, 500);
             Controls.Add(panel1);
             Name = "Form3";
             Text = "Form3";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ResumeLayout(false);
         }
 
@@ -331,9 +336,7 @@
         private TextBox textBox11;
         private TextBox textBox10;
         private TextBox textBox9;
-        private TextBox textBox8;
         private Label label9;
-        private TextBox textBox7;
         private Label label8;
         private TextBox textBox5;
         private Label label6;
@@ -346,5 +349,7 @@
         private Label label2;
         private TextBox textBox1;
         private Label label1;
+        private NumericUpDown numericUpDown2;
+        private NumericUpDown numericUpDown1;
     }
 }

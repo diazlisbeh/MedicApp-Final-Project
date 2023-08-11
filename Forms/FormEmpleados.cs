@@ -35,8 +35,8 @@ namespace Forms
             empleado.Telefono = textBox3.Text;
             empleado.Poblacion = textBox4.Text;
             empleado.Provincia = textBox5.Text;
-            empleado.Codigo_Postal = int.Parse(textBox6.Text);
-            empleado.NIF = int.Parse(textBox9.Text);
+            empleado.Codigo_Postal = (int)numericUpDown1.Value;
+            empleado.NIF = (int)numericUpDown2.Value;
             empleado.Numero_de_seguridad_social = textBox8.Text;
             empleado.Tipo_empleado = selected.ID;
 
@@ -66,6 +66,8 @@ namespace Forms
                 comboBox1.Items.Add(i);
             }
             comboBox1.DisplayMember = "Tipo";
+            numericUpDown1.Maximum = int.MaxValue - 1;
+            numericUpDown2.Maximum = int.MaxValue - 1;
         }
     }
 }

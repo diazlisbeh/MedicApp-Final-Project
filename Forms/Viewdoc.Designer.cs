@@ -47,7 +47,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(944, 441);
+            panel1.Size = new Size(883, 500);
             panel1.TabIndex = 0;
             panel1.Paint += panel1_Paint;
             // 
@@ -106,7 +106,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(944, 441);
+            ClientSize = new Size(883, 500);
             Controls.Add(panel1);
             Name = "Viewdoc";
             Text = "Viewdoc";
