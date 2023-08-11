@@ -104,6 +104,7 @@
             dateTimePicker4.Format = DateTimePickerFormat.Time;
             dateTimePicker4.Location = new Point(560, 171);
             dateTimePicker4.Name = "dateTimePicker4";
+            dateTimePicker4.ShowUpDown = true;
             dateTimePicker4.Size = new Size(121, 23);
             dateTimePicker4.TabIndex = 28;
             // 
@@ -112,6 +113,7 @@
             dateTimePicker3.Format = DateTimePickerFormat.Time;
             dateTimePicker3.Location = new Point(560, 272);
             dateTimePicker3.Name = "dateTimePicker3";
+            dateTimePicker3.ShowUpDown = true;
             dateTimePicker3.Size = new Size(121, 23);
             dateTimePicker3.TabIndex = 27;
             // 

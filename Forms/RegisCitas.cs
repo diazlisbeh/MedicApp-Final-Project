@@ -61,7 +61,7 @@ namespace Forms
             consulta.Paciente_ID = pacienteId.ID;
             consulta.Medico_ID = medicoId.ID;
             consulta.Dia_de_Semana = comboBox2.SelectedItem.ToString();
-            consulta.Fecha = dateTimePicker1.Value;
+            consulta.Fecha = DateOnly.FromDateTime(dateTimePicker1.Value);
             consulta.Hora_inicio = TimeOnly.Parse(dateTimePicker4.Value.ToShortTimeString());
             consulta.Hora_fin = TimeOnly.Parse(dateTimePicker3.Value.ToShortTimeString());
 
