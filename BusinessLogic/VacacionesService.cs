@@ -26,9 +26,17 @@ namespace BusinessLogic
         }
         public async Task<int> AddVaciones(periodo_vacaciones vacaciones)
         {
-            await _context.AddAsync(vacaciones);
+            try
+            {
+                await _context.AddAsync(vacaciones);
             await _context.SaveChangesAsync();
-            return 0;
+            return 1;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                throw ex;
+            }
         }
         public async Task<int> DeleteVaciones(int vacacionesId)
         {
