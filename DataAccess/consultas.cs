@@ -21,7 +21,7 @@ namespace DataAccess
         public TimeOnly Hora_inicio { get; set; }
         public TimeOnly Hora_fin { get; set; }
         public bool IsDeleted { get; set; }
-        public DateTime DeletedDateTime { get; set; }
+        public DateTime? DeletedDateTime { get; set; }
         public virtual Medico? Medicos { get; set; }
         public virtual pacientes? pacientes { get; set; }
     }

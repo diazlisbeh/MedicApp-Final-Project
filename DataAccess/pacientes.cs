@@ -21,7 +21,7 @@ namespace DataAccess
         [ForeignKey("medicos")]
         public int Medico_ID { get; set; }
         public bool IsDeleted { get; set; }
-        public DateTime DeletedDateTime { get; set; }
+        public DateTime? DeletedDateTime { get; set; }
         public virtual Medico? medicos { get; set; }
         public virtual ICollection<consultas>? consultas { get; set; }
     }

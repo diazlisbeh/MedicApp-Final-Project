@@ -17,7 +17,7 @@ namespace DataAccess
         public DateOnly Fecha_inicio { get; set; }
         public DateOnly Fecha_fin { get; set; }
         public bool IsDeleted { get; set; }
-        public DateTime DeletedDateTime { get; set; }
+        public DateTime? DeletedDateTime { get; set; }
         public virtual empleados empleados { get; set; }
     }
 }
