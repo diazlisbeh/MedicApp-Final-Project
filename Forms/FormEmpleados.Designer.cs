@@ -117,7 +117,6 @@
             // 
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Administrador", "ATS", "ATS de Zona", "Auxiliares de enfermeria", "Celadores" });
             comboBox1.Location = new Point(742, 264);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(157, 23);
@@ -299,6 +298,7 @@
             Controls.Add(panel1);
             Name = "FormEmpleados";
             Text = "FormEmpleados";
+            Load += FormEmpleados_LoadAsync;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);

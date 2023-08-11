@@ -21,7 +21,7 @@ namespace BusinessLogic
             {
                 var medico = await _context.medicos.FirstOrDefaultAsync(m => m.ID == medicoId);
                 if(medico is null) return 0;
-                 _context.medicos.Remove(medico);    
+                medico.IsDeleted = true;
                 await _context.SaveChangesAsync();
                 return 1;
             }
@@ -49,6 +49,8 @@ namespace BusinessLogic
         public async Task<List<Medico>> GetMedicos()
         {
             var medicos = await _context.medicos  . ToListAsync();
+            medicos = medicos.Where(m => m.IsDeleted == false).ToList();
+            if(medicos is null) return null;
             return medicos;
         }
 
@@ -84,6 +86,13 @@ namespace BusinessLogic
             }
             return medicosDto;
         }
+
+      /*  public async Task<MedicoItem> GetMedicoItem()
+        {
+            var medicos = await _context.medicos.ToListAsync();
+            MedicoItem medicoItem = (MedicoItem)medicos.Select((p) => new MedicoItem { Id = p.ID, Nombre = p.Nombre, });
+            return medicoItem;
+        }*/
 
         private bool EstaActivo(DateOnly inicio, DateOnly baja)
         {

@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Sqlite;
 using SQLitePCL;
+using Microsoft.Extensions.Configuration;
 
 namespace DataAccess
 {
@@ -9,6 +10,7 @@ namespace DataAccess
     public class DBcont:DbContext
     {
         private string _database = Environment.CurrentDirectory + "\\database.db";
+        IConfiguration configuration;
        
         public virtual DbSet<consultas>? consultas { get; set; }
         public virtual DbSet<empleados>? empleados { get; set; }
@@ -21,7 +23,8 @@ namespace DataAccess
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-           optionsBuilder.UseSqlite($"DataSource='{_database}'");
+            optionsBuilder.UseSqlite($"DataSource='{_database}'");
+           /* optionsBuilder.UseSqlite(configuration.GetConnectionString("Connection"));*/
             //SQLitePCL.Batteries.Init();
         }
     }

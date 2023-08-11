@@ -29,37 +29,41 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            comboBox2 = new ComboBox();
+            dateTimePicker4 = new DateTimePicker();
+            dateTimePicker3 = new DateTimePicker();
+            dateTimePicker1 = new DateTimePicker();
+            comboBox1 = new ComboBox();
             button3 = new Button();
             button2 = new Button();
-            textBox5 = new TextBox();
             label6 = new Label();
-            textBox4 = new TextBox();
             label5 = new Label();
-            textBox3 = new TextBox();
             label4 = new Label();
             label3 = new Label();
-            textBox2 = new TextBox();
             label2 = new Label();
-            textBox1 = new TextBox();
             label1 = new Label();
+            comboBox3 = new ComboBox();
+            label7 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(64, 69, 76);
+            panel1.Controls.Add(label7);
+            panel1.Controls.Add(comboBox3);
+            panel1.Controls.Add(comboBox2);
+            panel1.Controls.Add(dateTimePicker4);
+            panel1.Controls.Add(dateTimePicker3);
+            panel1.Controls.Add(dateTimePicker1);
+            panel1.Controls.Add(comboBox1);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
-            panel1.Controls.Add(textBox5);
             panel1.Controls.Add(label6);
-            panel1.Controls.Add(textBox4);
             panel1.Controls.Add(label5);
-            panel1.Controls.Add(textBox3);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(label3);
-            panel1.Controls.Add(textBox2);
             panel1.Controls.Add(label2);
-            panel1.Controls.Add(textBox1);
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
@@ -67,6 +71,47 @@
             panel1.Size = new Size(944, 441);
             panel1.TabIndex = 1;
             panel1.Paint += panel1_Paint;
+            // 
+            // comboBox2
+            // 
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo" });
+            comboBox2.Location = new Point(19, 269);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(121, 23);
+            comboBox2.TabIndex = 29;
+            // 
+            // dateTimePicker4
+            // 
+            dateTimePicker4.Format = DateTimePickerFormat.Time;
+            dateTimePicker4.Location = new Point(398, 168);
+            dateTimePicker4.Name = "dateTimePicker4";
+            dateTimePicker4.Size = new Size(121, 23);
+            dateTimePicker4.TabIndex = 28;
+            // 
+            // dateTimePicker3
+            // 
+            dateTimePicker3.Format = DateTimePickerFormat.Time;
+            dateTimePicker3.Location = new Point(398, 269);
+            dateTimePicker3.Name = "dateTimePicker3";
+            dateTimePicker3.Size = new Size(121, 23);
+            dateTimePicker3.TabIndex = 27;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new Point(19, 168);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(121, 23);
+            dateTimePicker1.TabIndex = 25;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(19, 76);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 24;
             // 
             // button3
             // 
@@ -96,56 +141,36 @@
             button2.TabIndex = 22;
             button2.Text = "Guardar";
             button2.UseVisualStyleBackColor = true;
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(407, 168);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(100, 23);
-            textBox5.TabIndex = 14;
+            button2.Click += button2_Click;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label6.ForeColor = Color.White;
-            label6.Location = new Point(407, 144);
+            label6.Location = new Point(398, 245);
             label6.Name = "label6";
             label6.Size = new Size(66, 21);
             label6.TabIndex = 13;
             label6.Text = "Hora fin";
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(407, 76);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 12;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.White;
-            label5.Location = new Point(407, 52);
+            label5.Location = new Point(398, 144);
             label5.Name = "label5";
             label5.Size = new Size(85, 21);
             label5.TabIndex = 11;
             label5.Text = "Hora inicio";
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(12, 269);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 6;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.White;
-            label4.Location = new Point(12, 245);
+            label4.Location = new Point(19, 245);
             label4.Name = "label4";
             label4.Size = new Size(128, 21);
             label4.TabIndex = 5;
@@ -162,13 +187,6 @@
             label3.TabIndex = 4;
             label3.Text = "Fecha";
             // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(12, 168);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(175, 23);
-            textBox2.TabIndex = 3;
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -179,13 +197,6 @@
             label2.Size = new Size(80, 21);
             label2.TabIndex = 2;
             label2.Text = "Medico ID";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(12, 76);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(175, 23);
-            textBox1.TabIndex = 1;
             // 
             // label1
             // 
@@ -198,6 +209,26 @@
             label1.TabIndex = 0;
             label1.Text = "REGISTRO DE CONSULTAS";
             // 
+            // comboBox3
+            // 
+            comboBox3.FormattingEnabled = true;
+            comboBox3.Location = new Point(398, 76);
+            comboBox3.Name = "comboBox3";
+            comboBox3.Size = new Size(121, 23);
+            comboBox3.TabIndex = 30;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(398, 52);
+            label7.Name = "label7";
+            label7.Size = new Size(67, 21);
+            label7.TabIndex = 31;
+            label7.Text = "Paciente";
+            label7.Click += label7_Click;
+            // 
             // RegisCitas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -206,6 +237,7 @@
             Controls.Add(panel1);
             Name = "RegisCitas";
             Text = "RegisCitas";
+            Load += RegisCitas_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -216,16 +248,18 @@
         private Panel panel1;
         private Button button3;
         private Button button2;
-        private TextBox textBox5;
         private Label label6;
-        private TextBox textBox4;
         private Label label5;
-        private TextBox textBox3;
         private Label label4;
         private Label label3;
-        private TextBox textBox2;
         private Label label2;
-        private TextBox textBox1;
         private Label label1;
+        private ComboBox comboBox1;
+        private DateTimePicker dateTimePicker4;
+        private DateTimePicker dateTimePicker3;
+        private DateTimePicker dateTimePicker1;
+        private ComboBox comboBox2;
+        private Label label7;
+        private ComboBox comboBox3;
     }
 }

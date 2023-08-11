@@ -1,4 +1,5 @@
 ﻿using BusinessLogic;
+
 using DataAccess;
 using System;
 using System.Collections.Generic;
@@ -38,14 +39,14 @@ namespace Forms
         {
             var paciente = new pacientes();
             var service = new PacienteServices();
-
+            var selected = (Medico)comboBox1.SelectedItem;
             paciente.Nombre = textBox1.Text;
             paciente.Direccion = textBox2.Text;
             paciente.Telefono = textBox3.Text;
             paciente.Codigo_Postal = int.Parse(textBox4.Text);
             paciente.NIF = int.Parse(textBox5.Text);
             paciente.Numero_de_seguridad_social = textBox6.Text;
-            paciente.Medico_ID = int.Parse(textBox7.Text);
+            paciente.Medico_ID = selected.ID;
 
             int result = await service.AddPaciente(paciente);
 
@@ -61,6 +62,29 @@ namespace Forms
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void Form2_Load(object sender, EventArgs e)
+        {
+            var service = new MedicosService();
+            var item = await service.GetMedicos();
+           /* comboBox1.DataSource = item.Select(p => new MedicoItem
+            {
+                Id = p.ID,
+                Nombre = p.Nombre
+            }).ToList();*/
+
+            foreach(var i in item)
+            {
+                comboBox1.Items.Add(i);
+            }
+            comboBox1.DisplayMember = "Nombre";
+            
         }
     }
 }

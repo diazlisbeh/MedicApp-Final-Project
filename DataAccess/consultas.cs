@@ -16,7 +16,7 @@ namespace DataAccess
         public int Medico_ID { get; set; }
         [ForeignKey("pacientes")]
         public int Paciente_ID { get; set; }
-        public TimeOnly Fecha { get; set; }
+        public DateTime? Fecha { get; set; }
         public string? Dia_de_Semana { get; set; }
         public TimeOnly Hora_inicio { get; set; }
         public TimeOnly Hora_fin { get; set; }

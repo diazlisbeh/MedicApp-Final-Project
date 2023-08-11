@@ -45,3 +45,19 @@ C:\Users\force\Documents\Código Fuente\C#\MedicApp-Final-Project\BusinessLogic\
 C:\Users\force\Documents\Código Fuente\C#\MedicApp-Final-Project\BusinessLogic\obj\Debug\net7.0\refint\BusinessLogic.dll
 C:\Users\force\Documents\Código Fuente\C#\MedicApp-Final-Project\BusinessLogic\obj\Debug\net7.0\BusinessLogic.pdb
 C:\Users\force\Documents\Código Fuente\C#\MedicApp-Final-Project\BusinessLogic\obj\Debug\net7.0\ref\BusinessLogic.dll
+C:\Users\lizbe\source\repos\Hola\MedicApp-Final-Project\BusinessLogic\obj\Debug\net7.0\BusinessLogic.csproj.AssemblyReference.cache
+C:\Users\lizbe\source\repos\Hola\MedicApp-Final-Project\BusinessLogic\obj\Debug\net7.0\BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lizbe\source\repos\Hola\MedicApp-Final-Project\BusinessLogic\obj\Debug\net7.0\BusinessLogic.AssemblyInfoInputs.cache
+C:\Users\lizbe\source\repos\Hola\MedicApp-Final-Project\BusinessLogic\obj\Debug\net7.0\BusinessLogic.AssemblyInfo.cs
+C:\Users\lizbe\source\repos\Hola\MedicApp-Final-Project\BusinessLogic\obj\Debug\net7.0\BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\lizbe\source\repos\Hola\MedicApp-Final-Project\BusinessLogic\obj\Debug\net7.0\refint\BusinessLogic.dll
+C:\Users\lizbe\source\repos\Hola\MedicApp-Final-Project\BusinessLogic\bin\Debug\net7.0\database.db
+C:\Users\lizbe\source\repos\Hola\MedicApp-Final-Project\BusinessLogic\bin\Debug\net7.0\BusinessLogic.deps.json
+C:\Users\lizbe\source\repos\Hola\MedicApp-Final-Project\BusinessLogic\bin\Debug\net7.0\BusinessLogic.dll
+C:\Users\lizbe\source\repos\Hola\MedicApp-Final-Project\BusinessLogic\bin\Debug\net7.0\BusinessLogic.pdb
+C:\Users\lizbe\source\repos\Hola\MedicApp-Final-Project\BusinessLogic\bin\Debug\net7.0\DataAccess.dll
+C:\Users\lizbe\source\repos\Hola\MedicApp-Final-Project\BusinessLogic\bin\Debug\net7.0\DataAccess.pdb
+C:\Users\lizbe\source\repos\Hola\MedicApp-Final-Project\BusinessLogic\obj\Debug\net7.0\BusinessLogic.csproj.CopyComplete
+C:\Users\lizbe\source\repos\Hola\MedicApp-Final-Project\BusinessLogic\obj\Debug\net7.0\BusinessLogic.dll
+C:\Users\lizbe\source\repos\Hola\MedicApp-Final-Project\BusinessLogic\obj\Debug\net7.0\BusinessLogic.pdb
+C:\Users\lizbe\source\repos\Hola\MedicApp-Final-Project\BusinessLogic\obj\Debug\net7.0\ref\BusinessLogic.dll

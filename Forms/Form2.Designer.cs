@@ -31,7 +31,6 @@
             panel1 = new Panel();
             button3 = new Button();
             button2 = new Button();
-            textBox7 = new TextBox();
             label8 = new Label();
             textBox6 = new TextBox();
             label7 = new Label();
@@ -46,15 +45,16 @@
             label2 = new Label();
             textBox1 = new TextBox();
             label1 = new Label();
+            comboBox1 = new ComboBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(64, 69, 76);
+            panel1.Controls.Add(comboBox1);
             panel1.Controls.Add(button3);
             panel1.Controls.Add(button2);
-            panel1.Controls.Add(textBox7);
             panel1.Controls.Add(label8);
             panel1.Controls.Add(textBox6);
             panel1.Controls.Add(label7);
@@ -104,13 +104,6 @@
             button2.Text = "Guardar";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click_1;
-            // 
-            // textBox7
-            // 
-            textBox7.Location = new Point(585, 76);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(100, 23);
-            textBox7.TabIndex = 18;
             // 
             // label8
             // 
@@ -243,6 +236,15 @@
             label1.TabIndex = 0;
             label1.Text = "REGISTRO DE PACIENTES";
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(580, 76);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 24;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -251,6 +253,7 @@
             Controls.Add(panel1);
             Name = "Form2";
             Text = "Form2";
+            Load += Form2_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -272,9 +275,9 @@
         private Label label6;
         private TextBox textBox4;
         private Label label5;
-        private TextBox textBox7;
         private Label label8;
         private Button button3;
         private Button button2;
+        private ComboBox comboBox1;
     }
 }

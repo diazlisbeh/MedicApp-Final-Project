@@ -29,7 +29,7 @@ namespace Forms
         {
             var empleado = new empleados();
             var service = new EmpleadosService();
-
+            var selected = (tipo_empleado)comboBox1.SelectedItem;
             empleado.Nombre = textBox1.Text;
             empleado.Direccion = textBox2.Text;
             empleado.Telefono = textBox3.Text;
@@ -38,7 +38,7 @@ namespace Forms
             empleado.Codigo_Postal = int.Parse(textBox6.Text);
             empleado.NIF = int.Parse(textBox9.Text);
             empleado.Numero_de_seguridad_social = textBox8.Text;
-            empleado.Tipo_empleado = comboBox1.SelectedIndex + 1;
+            empleado.Tipo_empleado = selected.ID;
 
             int result = await service.AddEmpleado(empleado);
 
@@ -55,6 +55,17 @@ namespace Forms
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private async void FormEmpleados_LoadAsync(object sender, EventArgs e)
+        {
+            var service = new TipoEmpleadoService();
+            var tipo = await service.GetTipoEmpleado();
+            foreach (var i in tipo)
+            {
+                comboBox1.Items.Add(i);
+            }
+            comboBox1.DisplayMember = "Tipo";
         }
     }
 }

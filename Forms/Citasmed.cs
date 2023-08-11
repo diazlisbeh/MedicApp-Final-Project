@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLogic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -55,6 +56,14 @@ namespace Forms
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private async void Citasmed_Load(object sender, EventArgs e)
+        {
+            var service = new ConsultasService();
+            var consultas = await service.GetConsultas();
+            dataGridView1.DataSource = consultas;
+            
         }
     }
 }

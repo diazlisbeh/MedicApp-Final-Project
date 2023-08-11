@@ -22,13 +22,18 @@ namespace BusinessLogic
         public async Task<List<empleados>> GetEmpleados()
         {
             var empleados = await _context.empleados.ToListAsync();
+            empleados.Where(e => e.IsDeleted == false).ToList();
             return empleados;
         }
         public async Task<int> AddEmpleado(empleados empleado)
         {
-            await _context.AddAsync(empleado);
-            await _context.SaveChangesAsync();
-            return 0;
+            try
+            {
+                await _context.AddAsync(empleado);
+                await _context.SaveChangesAsync();
+                return 1;
+            }catch (Exception ex) { return 0; }
+            
         }
         public async Task<int> DeleteEmpleado(int empleadoId)
         {
@@ -36,7 +41,7 @@ namespace BusinessLogic
             {
                 var empleado = await _context.empleados.FirstOrDefaultAsync(m => m.ID == empleadoId);
                 if(empleado is null) return 0;
-                _context.empleados.Remove(empleado);
+                empleado.IsDeleted = true;
                 await _context.SaveChangesAsync();
                 return 1;
             }
