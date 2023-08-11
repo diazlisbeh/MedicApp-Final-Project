@@ -21,7 +21,7 @@ namespace DataAccess
         public string? Tipo { get; set; }
         //public virtual tipo_empleado tipo_Empleado { get; set; }
         public bool IsDeleted { get; set; }
-        public DateTime DeletedDateTime { get; set; }
+        public DateTime? DeletedDateTime { get; set; }
         public virtual ICollection<consultas>? consultas { get; set; }
         public virtual sustitutos? sustitutos { get; set; }
         public virtual ICollection<pacientes>? pacientes { get; set; }

@@ -18,7 +18,7 @@ namespace DataAccess
         public DateOnly Fecha_alta { get; set; }
         public DateOnly Fecha_baja { get; set; }
         public bool IsDeleted { get; set; }
-        public DateTime DeletedDateTime { get; set; }
+        public DateTime? DeletedDateTime { get; set; }
         public virtual Medico? medicos { get; set; }
         
         

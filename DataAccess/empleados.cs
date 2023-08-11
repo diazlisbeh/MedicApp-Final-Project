@@ -23,7 +23,7 @@ namespace DataAccess
         [ForeignKey("tipo_Empleado")]
         public int Tipo_empleado { get; set; }
         public bool IsDeleted { get; set; }
-        public DateTime DeletedDateTime { get; set; }
+        public DateTime? DeletedDateTime { get; set; }
         public virtual tipo_empleado tipo_Empleado { get; set; }
         public virtual ICollection<periodo_vacaciones> periodo_Vacaciones { get; set; }
     }
