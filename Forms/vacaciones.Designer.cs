@@ -31,6 +31,10 @@
             panel1 = new Panel();
             panelBottom = new Panel();
             panel2 = new Panel();
+            dateTimePicker2 = new DateTimePicker();
+            dateTimePicker1 = new DateTimePicker();
+            label4 = new Label();
+            label6 = new Label();
             label14 = new Label();
             labelID = new Label();
             panel2_2 = new Panel();
@@ -50,10 +54,6 @@
             button2 = new Button();
             label1 = new Label();
             dataGridView1 = new DataGridView();
-            dateTimePicker2 = new DateTimePicker();
-            dateTimePicker1 = new DateTimePicker();
-            label4 = new Label();
-            label6 = new Label();
             panel1.SuspendLayout();
             panelBottom.SuspendLayout();
             panel2.SuspendLayout();
@@ -76,9 +76,10 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(879, 500);
+            panel1.Size = new Size(883, 500);
             panel1.TabIndex = 1;
-            panel1.Paint += panel1_Paint;
+            panel1.ControlAdded += panel1_ControlAdded;
+            panel1.ControlRemoved += panel1_ControlAdded;
             // 
             // panelBottom
             // 
@@ -87,7 +88,7 @@
             panelBottom.Dock = DockStyle.Bottom;
             panelBottom.Location = new Point(0, 265);
             panelBottom.Name = "panelBottom";
-            panelBottom.Size = new Size(879, 201);
+            panelBottom.Size = new Size(883, 201);
             panelBottom.TabIndex = 31;
             // 
             // panel2
@@ -103,16 +104,54 @@
             panel2.Dock = DockStyle.Bottom;
             panel2.Location = new Point(0, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(879, 158);
+            panel2.Size = new Size(883, 158);
             panel2.TabIndex = 29;
             panel2.Visible = false;
+            // 
+            // dateTimePicker2
+            // 
+            dateTimePicker2.Format = DateTimePickerFormat.Short;
+            dateTimePicker2.Location = new Point(394, 63);
+            dateTimePicker2.Name = "dateTimePicker2";
+            dateTimePicker2.Size = new Size(111, 23);
+            dateTimePicker2.TabIndex = 82;
+            // 
+            // dateTimePicker1
+            // 
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
+            dateTimePicker1.Location = new Point(116, 63);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(111, 23);
+            dateTimePicker1.TabIndex = 81;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(394, 39);
+            label4.Name = "label4";
+            label4.Size = new Size(76, 21);
+            label4.TabIndex = 80;
+            label4.Text = "Fecha fin ";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(116, 39);
+            label6.Name = "label6";
+            label6.Size = new Size(91, 21);
+            label6.TabIndex = 78;
+            label6.Text = "Fecha inicio";
             // 
             // label14
             // 
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label14.ForeColor = Color.White;
-            label14.Location = new Point(616, 83);
+            label14.Location = new Point(607, 64);
             label14.Name = "label14";
             label14.Size = new Size(28, 21);
             label14.TabIndex = 77;
@@ -123,7 +162,7 @@
             labelID.AutoSize = true;
             labelID.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             labelID.ForeColor = Color.White;
-            labelID.Location = new Point(650, 83);
+            labelID.Location = new Point(641, 64);
             labelID.Name = "labelID";
             labelID.Size = new Size(58, 21);
             labelID.TabIndex = 76;
@@ -134,7 +173,7 @@
             panel2_2.Controls.Add(btnNOCambios);
             panel2_2.Controls.Add(btnOKCambios);
             panel2_2.Dock = DockStyle.Right;
-            panel2_2.Location = new Point(808, 0);
+            panel2_2.Location = new Point(812, 0);
             panel2_2.Name = "panel2_2";
             panel2_2.Size = new Size(71, 158);
             panel2_2.TabIndex = 1;
@@ -153,6 +192,7 @@
             btnNOCambios.TabIndex = 27;
             btnNOCambios.Text = "Cancelar";
             btnNOCambios.UseVisualStyleBackColor = true;
+            btnNOCambios.Click += btnNOCambios_Click;
             // 
             // btnOKCambios
             // 
@@ -190,7 +230,7 @@
             panel3.Dock = DockStyle.Bottom;
             panel3.Location = new Point(0, 158);
             panel3.Name = "panel3";
-            panel3.Size = new Size(879, 43);
+            panel3.Size = new Size(883, 43);
             panel3.TabIndex = 28;
             panel3.Visible = false;
             // 
@@ -202,12 +242,13 @@
             btnOKDelete.FlatStyle = FlatStyle.Flat;
             btnOKDelete.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnOKDelete.ForeColor = Color.White;
-            btnOKDelete.Location = new Point(719, 0);
+            btnOKDelete.Location = new Point(723, 0);
             btnOKDelete.Name = "btnOKDelete";
             btnOKDelete.Size = new Size(79, 43);
             btnOKDelete.TabIndex = 81;
             btnOKDelete.Text = "Eliminar";
             btnOKDelete.UseVisualStyleBackColor = true;
+            btnOKDelete.Click += btnOKDelete_Click;
             // 
             // btnNODelete
             // 
@@ -217,12 +258,13 @@
             btnNODelete.FlatStyle = FlatStyle.Flat;
             btnNODelete.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnNODelete.ForeColor = Color.White;
-            btnNODelete.Location = new Point(798, 0);
+            btnNODelete.Location = new Point(802, 0);
             btnNODelete.Name = "btnNODelete";
             btnNODelete.Size = new Size(81, 43);
             btnNODelete.TabIndex = 80;
             btnNODelete.Text = "Cancelar";
             btnNODelete.UseVisualStyleBackColor = true;
+            btnNODelete.Click += btnNODelete_Click;
             // 
             // label15
             // 
@@ -261,7 +303,7 @@
             panelSuperBottom.Dock = DockStyle.Bottom;
             panelSuperBottom.Location = new Point(0, 466);
             panelSuperBottom.Name = "panelSuperBottom";
-            panelSuperBottom.Size = new Size(879, 34);
+            panelSuperBottom.Size = new Size(883, 34);
             panelSuperBottom.TabIndex = 30;
             // 
             // button1
@@ -349,44 +391,6 @@
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(628, 178);
             dataGridView1.TabIndex = 0;
-            // 
-            // dateTimePicker2
-            // 
-            dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(394, 50);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(111, 23);
-            dateTimePicker2.TabIndex = 82;
-            // 
-            // dateTimePicker1
-            // 
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(116, 50);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(111, 23);
-            dateTimePicker1.TabIndex = 81;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = Color.White;
-            label4.Location = new Point(394, 26);
-            label4.Name = "label4";
-            label4.Size = new Size(76, 21);
-            label4.TabIndex = 80;
-            label4.Text = "Fecha fin ";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.ForeColor = Color.White;
-            label6.Location = new Point(116, 26);
-            label6.Name = "label6";
-            label6.Size = new Size(91, 21);
-            label6.TabIndex = 78;
-            label6.Text = "Fecha inicio";
             // 
             // vacaciones
             // 

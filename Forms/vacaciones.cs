@@ -1,4 +1,5 @@
 ﻿using BusinessLogic;
+using DataAccess;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,7 +22,7 @@ namespace Forms
             _service = new VacacionesService();
         }
 
-        private async void fillDataGrid ()
+        private async void fillDataGrid()
         {
             var vacaciones = await _service.GetVaciones();
             this.dataGridView1.DataSource = vacaciones;
@@ -29,7 +30,7 @@ namespace Forms
         private async void vacaciones_Load(object sender, EventArgs e)
         {
             fillDataGrid();
-         
+
         }
 
         //Method to open formularies within the panel
@@ -72,7 +73,6 @@ namespace Forms
             panel2.Visible = false;
             panel3.Visible = false;
             panelBottom.Height = 1;
-
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -82,37 +82,84 @@ namespace Forms
 
 
 
-        private void btnOKCambios_Click(object sender, EventArgs e)
+        private async void btnOKCambios_Click(object sender, EventArgs e)
         {
-            /*
-                        bool validation = Utils.Validate(vaciones);
+            var vaca = new periodo_vacaciones();
 
-                        if (validation)
-                        {
-                            int res = await _service.Update(vaciones);
+            vaca.ID = int.Parse(labelID.Text);
+            vaca.Fecha_inicio = DateOnly.FromDateTime(dateTimePicker1.Value);
+            vaca.Fecha_fin = DateOnly.FromDateTime(dateTimePicker2.Value);
 
-                            if (res == 1)
-                            {
-                                MessageBox.Show("Se ha agregado correctamente");
-                                this.Close();
-                            }
-                            else { MessageBox.Show("Ha ocurrido un error al guardar los datos"); }
 
-                        }*/
+            bool validation = Utils.Validate(vaca);
+
+            if (validation)
+            {
+                int res = await _service.Update(vaca.ID, vaca);
+
+                if (res == 1)
+                {
+                    MessageBox.Show("Se ha agregado correctamente");
+                    this.Close();
+                }
+                else { MessageBox.Show("Ha ocurrido un error al guardar los datos"); }
+
+            }
+            panel2.Visible = false;
+            panelBottom.Height = 1;
+            fillDataGrid();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             panelBottom.Height = BottomY;
-            panel3.Visible=false;
+            panel3.Visible = false;
             panel2.Visible = true;
-            dateTimePicker1.Value= DateTime.Parse(dataGridView1.CurrentRow.Cells["Fecha_inicio"].Value.ToString());
+
+            labelID.Text = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
+            dateTimePicker1.Value = DateTime.Parse(dataGridView1.CurrentRow.Cells["Fecha_inicio"].Value.ToString());
             dateTimePicker2.Value = DateTime.Parse(dataGridView1.CurrentRow.Cells["Fecha_fin"].Value.ToString());
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            panelBottom.Height = BottomY;
+            panel2.Visible = false;
+            panel3.Visible = true;
+            labelDelID.Text = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
+        }
 
+        private void btnNOCambios_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = false;
+            panelBottom.Height = 1;
+        }
+
+        private async void btnOKDelete_Click(object sender, EventArgs e)
+        {
+            // La funcione de Delete va aqui!!
+            DialogResult result = MessageBox.Show("¿Seguro desea eliminar al Doctor?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                int res = await _service.DeleteVaciones(int.Parse(labelDelID.Text));
+                if (res == 1) MessageBox.Show("Se ha eliminado correctamente");
+            }
+            //  int res = await _service.DeleteMedico(int.Parse(labelDelID.Text));
+
+            panel3.Visible = false;
+            panelBottom.Height = 1;
+            fillDataGrid();
+        }
+
+        private void btnNODelete_Click(object sender, EventArgs e)
+        {
+            panel3.Visible = false;
+            panelBottom.Height = 1;
+        }
+
+        private void panel1_ControlAdded(object sender, ControlEventArgs e)
+        {
+            fillDataGrid();
         }
     }
 }
