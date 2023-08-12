@@ -78,7 +78,7 @@ namespace BusinessLogic
       
         public async Task<List<MedicosDto>> GetMedicosWithSustituto()
         {
-            var medicos = await _context.medicos.ToListAsync();
+            var medicos = await this.GetMedicos();
             var sustitutos = await _context.sustitutos.ToListAsync();
             
             

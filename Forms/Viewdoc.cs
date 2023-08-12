@@ -14,11 +14,13 @@ namespace Forms
 {
     public partial class Viewdoc : Form
     {
+        private MedicosService _service;
         public Viewdoc()
         {
             InitializeComponent();
             numericUpDown1.Maximum = int.MaxValue - 1;
             numericUpDown2.Maximum = int.MaxValue - 1;
+            _service = new MedicosService();
         }
 
 
@@ -70,8 +72,8 @@ namespace Forms
 
         private async void Viewdoc_Shown(object sender, EventArgs e)
         {
-            var medser = new MedicosService();
-            List<MedicosDto> listamedicos = await medser.GetMedicosWithSustituto();
+
+            List<MedicosDto> listamedicos = await _service.GetMedicosWithSustituto();
             dataGridView1.DataSource = listamedicos;
         }
 
@@ -98,10 +100,10 @@ namespace Forms
             textBox9.Text = dataGridView1.CurrentRow.Cells["Tipo"].Value.ToString();
         }
 
-        private void btnOKCambios_Click(object sender, EventArgs e)
+        private async void btnOKCambios_Click(object sender, EventArgs e)
         {
             var doc = new Medico();
-            var serv = new MedicosService();
+
 
             doc.ID = int.Parse(labelID.Text);
             doc.Nombre = textBox1.Text;
@@ -116,6 +118,8 @@ namespace Forms
             doc.Tipo = textBox9.Text;
 
             // La funcion de guardar va aqui!!
+            int res = await _service.Update(doc.ID, doc);
+            if (res == 1) MessageBox.Show("Se ha actualizado correctamente");
             panel2.Visible = false;
         }
 
@@ -131,9 +135,17 @@ namespace Forms
             labelDelID.Text = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
         }
 
-        private void btnOKDelete_Click(object sender, EventArgs e)
+        private async void btnOKDelete_Click(object sender, EventArgs e)
         {
             // La funcione de Delete va aqui!!
+            DialogResult result = MessageBox.Show("¿Seguro desea eliminar al Doctor?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                int res = await _service.DeleteMedico(int.Parse(labelDelID.Text));
+                if (res == 1) MessageBox.Show("Se ha eliminado correctamente");
+            }
+            //  int res = await _service.DeleteMedico(int.Parse(labelDelID.Text));
+
             panel3.Visible = false;
         }
 
