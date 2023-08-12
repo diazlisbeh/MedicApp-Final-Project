@@ -16,6 +16,8 @@ namespace Forms
     public partial class Viewdoc : Form
     {
         private MedicosService _service;
+        const int BottomY = 158;
+
         public Viewdoc()
         {
             InitializeComponent();
@@ -50,8 +52,6 @@ namespace Forms
                 formulary.BringToFront();
             }
         }
-
-        const int BottomY = 158;
 
         private void button2_Click(object sender, EventArgs e)
         {
