@@ -21,7 +21,16 @@ namespace BusinessLogic
             {
                 var medicoDB = await _context.medicos.FirstOrDefaultAsync(p => p.ID == medicoId);
                 if(medicoDB is null)  return 0;
-                medicoDB = medico;
+                medicoDB.Nombre= medico.Nombre;
+                medicoDB.Direccion = medico.Direccion;
+                medicoDB.Telefono = medico.Telefono;
+                medicoDB.Poblacion = medico.Poblacion;
+                medicoDB.Provincia = medico.Provincia;
+                medicoDB.Codigo_Postal = medico.Codigo_Postal;
+                medicoDB.NIF = medico.NIF;
+                medicoDB.Numero_de_colegiado = medico.Numero_de_colegiado;
+                medicoDB.Numero_de_seguridad_social = medico.Numero_de_seguridad_social;
+                
                 await _context.SaveChangesAsync();
                 return 1;
             }catch(Exception ex) { return 0; }

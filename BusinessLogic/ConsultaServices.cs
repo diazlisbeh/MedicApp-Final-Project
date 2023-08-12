@@ -52,6 +52,27 @@ namespace BusinessLogic
             }
         }
 
+        public async Task<int> Update(int consultaId, consultas consulta)
+        {
+            try
+            {
+                var consultaDB = await _context.consultas.FirstOrDefaultAsync(c => c.Consulta_ID == consultaId);
+
+                consultaDB.Dia_de_Semana = consulta.Dia_de_Semana;
+                consultaDB.Fecha = consulta.Fecha;
+                consultaDB.Hora_fin = consulta.Hora_fin;
+                consultaDB.Hora_inicio = consulta.Hora_inicio;
+
+                await _context.SaveChangesAsync();
+                return 1;
+            }catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return 0;
+            }
+
+        }
+
 
     }
 }

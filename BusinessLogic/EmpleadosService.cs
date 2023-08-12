@@ -51,13 +51,19 @@ namespace BusinessLogic
                 return 0;
             }
         }
-        public async Task<int> Update(int medicoId, Medico medico)
+        public async Task<int> Update(int empleadoId, empleados empleado)
         {
             try
             {
-                var medicoDB = await _context.medicos.FirstOrDefaultAsync(p => p.ID == medicoId);
-                if (medicoDB is null) return 0;
-                medicoDB = medico;
+                var empleadoDB = await _context.empleados.FirstOrDefaultAsync(p => p.ID == empleadoId);
+                if( empleadoDB is null) return 0;
+                empleadoDB.Nombre = empleado.Nombre;
+                empleadoDB.Direccion = empleado.Direccion;
+                empleadoDB.Telefono = empleado.Telefono;
+                empleadoDB.Poblacion = empleado.Poblacion;
+                empleadoDB.Provincia = empleado.Provincia;
+                empleadoDB.Codigo_Postal = empleado.Codigo_Postal;
+
                 await _context.SaveChangesAsync();
                 return 1;
             }

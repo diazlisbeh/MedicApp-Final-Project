@@ -47,6 +47,7 @@ namespace BusinessLogic
                 _context.periodo_vacaciones.Remove(vacaciones);
                 await _context.SaveChangesAsync();
                 return 1;
+                
             }
             catch (Exception ex)
             {
