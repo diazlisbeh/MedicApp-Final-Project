@@ -14,17 +14,22 @@ namespace Forms
     public partial class vacaciones : Form
     {
         private VacacionesService _service;
+        const int BottomY = 158;
         public vacaciones()
         {
             InitializeComponent();
             _service = new VacacionesService();
         }
 
-        private async void vacaciones_Load(object sender, EventArgs e)
+        private async void fillDataGrid ()
         {
-
             var vacaciones = await _service.GetVaciones();
             this.dataGridView1.DataSource = vacaciones;
+        }
+        private async void vacaciones_Load(object sender, EventArgs e)
+        {
+            fillDataGrid();
+         
         }
 
         //Method to open formularies within the panel
@@ -64,6 +69,9 @@ namespace Forms
         private void button2_Click(object sender, EventArgs e)
         {
             OpenFormulary<RegistroVacaciones>();
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panelBottom.Height = 1;
 
         }
 
@@ -71,6 +79,8 @@ namespace Forms
         {
             this.Close();
         }
+
+
 
         private void btnOKCambios_Click(object sender, EventArgs e)
         {
@@ -89,6 +99,20 @@ namespace Forms
                             else { MessageBox.Show("Ha ocurrido un error al guardar los datos"); }
 
                         }*/
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            panelBottom.Height = BottomY;
+            panel3.Visible=false;
+            panel2.Visible = true;
+            dateTimePicker1.Value= DateTime.Parse(dataGridView1.CurrentRow.Cells["Fecha_inicio"].Value.ToString());
+            dateTimePicker2.Value = DateTime.Parse(dataGridView1.CurrentRow.Cells["Fecha_fin"].Value.ToString());
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

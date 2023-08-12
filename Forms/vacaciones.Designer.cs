@@ -277,6 +277,7 @@
             button1.TabIndex = 27;
             button1.Text = "Eliminar";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
             // 
             // button4
             // 
@@ -291,6 +292,7 @@
             button4.TabIndex = 26;
             button4.Text = "Modificar";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
