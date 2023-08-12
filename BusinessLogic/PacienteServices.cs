@@ -32,7 +32,8 @@ namespace BusinessLogic
                 var paciente = await _context.pacientes.FirstOrDefaultAsync(p => p.ID == pacienteId);
                 if(paciente is null) return 0;
                 paciente.IsDeleted =true;
-                _context.SaveChanges();
+                paciente.DeletedDateTime = DateTime.Now;
+                await _context.SaveChangesAsync();
                 return 1;
             }catch (Exception ex) { 
                 Console.Write(ex.ToString());

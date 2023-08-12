@@ -43,6 +43,7 @@ namespace BusinessLogic
                 var medico = await _context.medicos.FirstOrDefaultAsync(m => m.ID == medicoId);
                 if(medico is null) return 0;
                 medico.IsDeleted = true;
+                medico.DeletedDateTime = DateTime.Now;
                 await _context.SaveChangesAsync();
                 return 1;
             }
