@@ -65,13 +65,21 @@ namespace Forms
             consulta.Hora_inicio = TimeOnly.Parse(dateTimePicker4.Value.ToShortTimeString());
             consulta.Hora_fin = TimeOnly.Parse(dateTimePicker3.Value.ToShortTimeString());
 
-            int res = await service.AddConsulta(consulta);
-            if (res == 1)
+            bool validation = Utils.Validate(consulta);
+
+            if (validation)
             {
-                MessageBox.Show("Se ha agregado la consulta correctamente");
-                this.Close();
+                int res = await service.AddConsulta( consulta);
+
+                if (res == 1)
+                {
+                    MessageBox.Show("Se ha agregado la consulta correctamente");
+                    this.Close();
+                }
+                else { MessageBox.Show("Ha ocurrido un error al guardar los datos"); }
+
             }
-            if (res == 0) MessageBox.Show("Ha ocurrido un error al agregar su consulta");
+          
 
 
         }

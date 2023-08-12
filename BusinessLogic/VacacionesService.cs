@@ -56,6 +56,25 @@ namespace BusinessLogic
             }
         }
 
+        public async Task<int> Update (int id,periodo_vacaciones vacaciones)
+        {
+            try
+            {
+                var vacaDB = await _context.periodo_vacaciones.FirstOrDefaultAsync(v => v.ID == id);
+                if (vacaDB is null) return 0;
+
+                vacaDB.Fecha_inicio = vacaciones.Fecha_inicio;
+                vacaDB.Fecha_fin = vacaciones.Fecha_fin;
+
+                await _context.SaveChangesAsync();
+                return 1;
+            }catch(Exception ex)
+            {
+                return 0;
+            }
+
+        }
+
 
     }
 }

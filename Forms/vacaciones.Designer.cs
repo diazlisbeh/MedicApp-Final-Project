@@ -29,12 +29,6 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            button3 = new Button();
-            button2 = new Button();
-            label1 = new Label();
-            dataGridView1 = new DataGridView();
-            button4 = new Button();
-            button1 = new Button();
             panelBottom = new Panel();
             panel2 = new Panel();
             label14 = new Label();
@@ -70,14 +64,20 @@
             labelDelID = new Label();
             label3 = new Label();
             panelSuperBottom = new Panel();
+            button1 = new Button();
+            button4 = new Button();
+            button3 = new Button();
+            button2 = new Button();
+            label1 = new Label();
+            dataGridView1 = new DataGridView();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panelBottom.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             panel2_2.SuspendLayout();
             panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -97,90 +97,6 @@
             panel1.Size = new Size(883, 500);
             panel1.TabIndex = 1;
             panel1.Paint += panel1_Paint;
-            // 
-            // button3
-            // 
-            button3.FlatAppearance.MouseDownBackColor = Color.Red;
-            button3.FlatAppearance.MouseOverBackColor = Color.Red;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(593, 217);
-            button3.Name = "button3";
-            button3.Size = new Size(86, 33);
-            button3.TabIndex = 24;
-            button3.Text = "Cerrar";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
-            // button2
-            // 
-            button2.FlatAppearance.MouseDownBackColor = Color.Lime;
-            button2.FlatAppearance.MouseOverBackColor = Color.Lime;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(202, 217);
-            button2.Name = "button2";
-            button2.Size = new Size(86, 33);
-            button2.TabIndex = 23;
-            button2.Text = "Registrar";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(375, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(110, 21);
-            label1.TabIndex = 1;
-            label1.Text = "VACACIONES";
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.AllowUserToResizeColumns = false;
-            dataGridView1.AllowUserToResizeRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(116, 33);
-            dataGridView1.MultiSelect = false;
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(628, 178);
-            dataGridView1.TabIndex = 0;
-            // 
-            // button4
-            // 
-            button4.FlatAppearance.MouseDownBackColor = Color.FromArgb(192, 64, 0);
-            button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 0);
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(339, 217);
-            button4.Name = "button4";
-            button4.Size = new Size(86, 33);
-            button4.TabIndex = 26;
-            button4.Text = "Modificar";
-            button4.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.FlatAppearance.MouseDownBackColor = Color.DarkRed;
-            button1.FlatAppearance.MouseOverBackColor = Color.Red;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(482, 217);
-            button1.Name = "button1";
-            button1.Size = new Size(86, 33);
-            button1.TabIndex = 27;
-            button1.Text = "Eliminar";
-            button1.UseVisualStyleBackColor = true;
             // 
             // panelBottom
             // 
@@ -466,6 +382,7 @@
             btnOKCambios.TabIndex = 26;
             btnOKCambios.Text = "Confirmar";
             btnOKCambios.UseVisualStyleBackColor = true;
+            btnOKCambios.Click += btnOKCambios_Click;
             // 
             // label2
             // 
@@ -561,6 +478,90 @@
             panelSuperBottom.Size = new Size(883, 34);
             panelSuperBottom.TabIndex = 30;
             // 
+            // button1
+            // 
+            button1.FlatAppearance.MouseDownBackColor = Color.DarkRed;
+            button1.FlatAppearance.MouseOverBackColor = Color.Red;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(482, 217);
+            button1.Name = "button1";
+            button1.Size = new Size(86, 33);
+            button1.TabIndex = 27;
+            button1.Text = "Eliminar";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            button4.FlatAppearance.MouseDownBackColor = Color.FromArgb(192, 64, 0);
+            button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 0);
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button4.ForeColor = Color.White;
+            button4.Location = new Point(339, 217);
+            button4.Name = "button4";
+            button4.Size = new Size(86, 33);
+            button4.TabIndex = 26;
+            button4.Text = "Modificar";
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.FlatAppearance.MouseDownBackColor = Color.Red;
+            button3.FlatAppearance.MouseOverBackColor = Color.Red;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(593, 217);
+            button3.Name = "button3";
+            button3.Size = new Size(86, 33);
+            button3.TabIndex = 24;
+            button3.Text = "Cerrar";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // button2
+            // 
+            button2.FlatAppearance.MouseDownBackColor = Color.Lime;
+            button2.FlatAppearance.MouseOverBackColor = Color.Lime;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(202, 217);
+            button2.Name = "button2";
+            button2.Size = new Size(86, 33);
+            button2.TabIndex = 23;
+            button2.Text = "Registrar";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(375, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(110, 21);
+            label1.TabIndex = 1;
+            label1.Text = "VACACIONES";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
+            dataGridView1.AllowUserToResizeColumns = false;
+            dataGridView1.AllowUserToResizeRows = false;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(116, 33);
+            dataGridView1.MultiSelect = false;
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.Size = new Size(628, 178);
+            dataGridView1.TabIndex = 0;
+            // 
             // vacaciones
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -573,7 +574,6 @@
             Load += vacaciones_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panelBottom.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
@@ -582,6 +582,7 @@
             panel2_2.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 

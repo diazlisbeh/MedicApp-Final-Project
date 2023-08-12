@@ -18,11 +18,11 @@ namespace DataAccess
 
         [MaxLength(30, ErrorMessage = "La direccion debe tener menos de 30 caracteres")]
         public string? Direccion { get; set; }
-        [RegularExpression(@"^(809|829|849)-\d{3}-\d{4}$", ErrorMessage = "Formato de telefono invalido")]
+        [RegularExpression(@"^(809|829|849)-\d{3}-\d{4}$", ErrorMessage = "Formato de telefono debe ser XXX-XXX-XXXX")]
         public string? Telefono { get; set; }
         public string? Poblacion { get; set; }
         public string? Provincia { get; set; }
-        [MaxLength(6, ErrorMessage = "El codigo postal debe contener menos de 6 caracteres")]
+       // [MaxLength(6, ErrorMessage = "El codigo postal debe contener menos de 6 caracteres")]
         public int Codigo_Postal { get; set; }
         public int NIF { get; set; } 
         public string? Numero_de_seguridad_social { get; set; }

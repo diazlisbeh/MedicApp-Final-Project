@@ -121,9 +121,22 @@ namespace Forms
             doc.Numero_de_colegiado = textBox10.Text;
             doc.Tipo = textBox9.Text;
 
+            bool validation = Utils.Validate(doc);
+
+            if (validation)
+            {
+                int res = await _service.Update(doc.ID,doc);
+
+                if (res == 1)
+                {
+                    MessageBox.Show("Se ha agregado correctamente");
+                    this.Close();
+                }
+                else { MessageBox.Show("Ha ocurrido un error al guardar los datos"); }
+
+            }
             // La funcion de guardar va aqui!!
-            int res = await _service.Update(doc.ID, doc);
-            if (res == 1) MessageBox.Show("Se ha actualizado correctamente");
+          
             //else { MessageBox.Show("Ha ocurrido un error al intentar guardar"); }
             panel2.Visible = false;
             panelBottom.Height = 1;

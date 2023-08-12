@@ -34,11 +34,22 @@ namespace Forms
             vaciones.Fecha_inicio = DateOnly.FromDateTime(dateTimePicker1.Value);
             vaciones.Fecha_fin = DateOnly.FromDateTime(dateTimePicker2.Value);
 
-            int result = await service.AddVaciones(vaciones);
+            bool validation = Utils.Validate(vaciones);
 
-            if (result == 1) { MessageBox.Show("Se ha agregado el periodo de vaciones correctamente"); }
-            else { MessageBox.Show("Ha ocurrido un error"); }
-            this.Close();
+            if (validation)
+            {
+                int res = await service.AddVaciones(vaciones);
+
+                if (res == 1)
+                {
+                    MessageBox.Show("Se ha agregado correctamente");
+                    this.Close();
+                }
+                else { MessageBox.Show("Ha ocurrido un error al guardar los datos"); }
+
+            }
+
+          
         }
 
         private void button2_Click(object sender, EventArgs e)

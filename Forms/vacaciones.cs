@@ -13,15 +13,17 @@ namespace Forms
 {
     public partial class vacaciones : Form
     {
+        private VacacionesService _service;
         public vacaciones()
         {
             InitializeComponent();
+            _service = new VacacionesService();
         }
 
         private async void vacaciones_Load(object sender, EventArgs e)
         {
-            var service = new VacacionesService();
-            var vacaciones = await service.GetVaciones();
+            
+            var vacaciones = await _service.GetVaciones();
             this.dataGridView1.DataSource = vacaciones;
         }
 
@@ -68,6 +70,25 @@ namespace Forms
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnOKCambios_Click(object sender, EventArgs e)
+        {
+/*
+            bool validation = Utils.Validate(vaciones);
+
+            if (validation)
+            {
+                int res = await _service.Update(vaciones);
+
+                if (res == 1)
+                {
+                    MessageBox.Show("Se ha agregado correctamente");
+                    this.Close();
+                }
+                else { MessageBox.Show("Ha ocurrido un error al guardar los datos"); }
+
+            }*/
         }
     }
 }
