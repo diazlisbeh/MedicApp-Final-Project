@@ -42,6 +42,7 @@ namespace BusinessLogic
                 var consulta = await _context.consultas.FirstOrDefaultAsync(m => m.Consulta_ID == consultaId);
                 if(consulta is null) return 0;
                 consulta.IsDeleted = true;
+                consulta.DeletedDateTime = DateTime.Now;
                 await _context.SaveChangesAsync();
                 return 1;
             }

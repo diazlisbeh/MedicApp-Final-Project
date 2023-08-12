@@ -111,7 +111,7 @@ namespace Forms
             comboBox1.SelectedIndex = index;
         }
 
-        private void btnOKCambios_Click(object sender, EventArgs e)
+        private async void btnOKCambios_Click(object sender, EventArgs e)
         {
             var emple = new empleados();
             var tipo = (tipo_empleado)comboBox1.SelectedItem;
@@ -128,7 +128,20 @@ namespace Forms
             emple.Tipo_empleado = tipo.ID;
 
             // La funcion de guardar va aqui!!
+            bool validation = Utils.Validate(emple);
 
+            if (validation)
+            {
+                int res = await _service.Update(emple.ID, emple);
+
+                if (res == 1)
+                {
+                    MessageBox.Show("Se ha agregado correctamente","Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else { MessageBox.Show("Ha ocurrido un error al guardar los datos"); }
+
+            }
 
             panel2.Visible = false;
             panelBottom.Height = 1;

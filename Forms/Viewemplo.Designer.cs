@@ -394,7 +394,7 @@
             btnOKCambios.TabIndex = 26;
             btnOKCambios.Text = "Confirmar";
             btnOKCambios.UseVisualStyleBackColor = true;
-            btnOKCambios.Click += btnOKCambios_Click;
+        //    btnOKCambios.Click += btnOKCambios_ClickAsync;
             // 
             // label2
             // 

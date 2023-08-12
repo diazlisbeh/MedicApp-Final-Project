@@ -42,6 +42,7 @@ namespace BusinessLogic
                 var empleado = await _context.empleados.FirstOrDefaultAsync(m => m.ID == empleadoId);
                 if(empleado is null) return 0;
                 empleado.IsDeleted = true;
+                empleado.DeletedDateTime = DateTime.Now;
                 await _context.SaveChangesAsync();
                 return 1;
             }
