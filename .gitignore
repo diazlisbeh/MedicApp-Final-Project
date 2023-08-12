@@ -640,3 +640,5 @@ $RECYCLE.BIN/
 /BusinessLogic/obj/Debug/net7.0/BusinessLogic.csproj.CoreCompileInputs.cache
 /DataAccess/obj/Debug/net7.0/DataAccess.genruntimeconfig.cache
 /DataAccess/obj/Debug/net7.0/DataAccess.csproj.CoreCompileInputs.cache
+/BusinessLogic/obj/Debug/net7.0/ref/BusinessLogic.dll
+/BusinessLogic/obj/Debug/net7.0/refint/BusinessLogic.dll
