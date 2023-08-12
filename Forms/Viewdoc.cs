@@ -1,4 +1,5 @@
 ﻿using BusinessLogic;
+using DataAccess;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,8 @@ namespace Forms
         public Viewdoc()
         {
             InitializeComponent();
+            numericUpDown1.Maximum = int.MaxValue - 1;
+            numericUpDown2.Maximum = int.MaxValue - 1;
         }
 
 
@@ -76,5 +79,69 @@ namespace Forms
         {
             this.Close();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            panel3.Visible = false;
+            panel2.Visible = true;
+
+            labelID.Text = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
+            textBox1.Text = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
+            textBox2.Text = dataGridView1.CurrentRow.Cells["Direccion"].Value.ToString();
+            textBox3.Text = dataGridView1.CurrentRow.Cells["Telefono"].Value.ToString();
+            textBox4.Text = dataGridView1.CurrentRow.Cells["Poblacion"].Value.ToString();
+            textBox5.Text = dataGridView1.CurrentRow.Cells["Provincia"].Value.ToString();
+            numericUpDown1.Value = (int)dataGridView1.CurrentRow.Cells["Codigo_Postal"].Value;
+            numericUpDown2.Value = (int)dataGridView1.CurrentRow.Cells["NIF"].Value;
+            textBox11.Text = dataGridView1.CurrentRow.Cells["Numero_de_seguridad_social"].Value.ToString();
+            textBox10.Text = dataGridView1.CurrentRow.Cells["Numero_de_colegiado"].Value.ToString();
+            textBox9.Text = dataGridView1.CurrentRow.Cells["Tipo"].Value.ToString();
+        }
+
+        private void btnOKCambios_Click(object sender, EventArgs e)
+        {
+            var doc = new Medico();
+            var serv = new MedicosService();
+
+            doc.ID = int.Parse(labelID.Text);
+            doc.Nombre = textBox1.Text;
+            doc.Direccion = textBox2.Text;
+            doc.Telefono = textBox3.Text;
+            doc.Poblacion = textBox4.Text;
+            doc.Provincia = textBox5.Text;
+            doc.Codigo_Postal = (int)numericUpDown1.Value;
+            doc.NIF = (int)numericUpDown2.Value;
+            doc.Numero_de_seguridad_social = textBox11.Text;
+            doc.Numero_de_colegiado = textBox10.Text;
+            doc.Tipo = textBox9.Text;
+
+            // La funcion de guardar va aqui!!
+            panel2.Visible = false;
+        }
+
+        private void btnNOCambios_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = false;
+            panel3.Visible = true;
+            labelDelID.Text = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
+        }
+
+        private void btnOKDelete_Click(object sender, EventArgs e)
+        {
+            // La funcione de Delete va aqui!!
+            panel3.Visible = false;
+        }
+
+        private void btnNODelete_Click(object sender, EventArgs e)
+        {
+            panel3.Visible = false;
+        }
+
+
     }
 }
