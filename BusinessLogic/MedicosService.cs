@@ -69,7 +69,7 @@ namespace BusinessLogic
 
         public async Task<List<Medico>> GetMedicos()
         {
-            var medicos = await _context.medicos  . ToListAsync();
+            var medicos = await _context.medicos.ToListAsync();
             medicos = medicos.Where(m => m.IsDeleted == false).ToList();
             if(medicos is null) return null;
             return medicos;

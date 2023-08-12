@@ -63,7 +63,7 @@
             label15 = new Label();
             labelDelID = new Label();
             label3 = new Label();
-            panel4 = new Panel();
+            panelSuperBottom = new Panel();
             button1 = new Button();
             button4 = new Button();
             button3 = new Button();
@@ -84,7 +84,7 @@
             // 
             panel1.BackColor = Color.FromArgb(64, 69, 76);
             panel1.Controls.Add(panelBottom);
-            panel1.Controls.Add(panel4);
+            panel1.Controls.Add(panelSuperBottom);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(button4);
             panel1.Controls.Add(button3);
@@ -96,7 +96,8 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(883, 500);
             panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
+            panel1.ControlAdded += panel1_ControlAdded;
+            panel1.ControlRemoved += panel1_ControlAdded;
             // 
             // panelBottom
             // 
@@ -356,7 +357,7 @@
             // btnNOCambios
             // 
             btnNOCambios.Dock = DockStyle.Bottom;
-            btnNOCambios.FlatAppearance.MouseDownBackColor = Color.Red;
+            btnNOCambios.FlatAppearance.MouseDownBackColor = Color.DarkRed;
             btnNOCambios.FlatAppearance.MouseOverBackColor = Color.Red;
             btnNOCambios.FlatStyle = FlatStyle.Flat;
             btnNOCambios.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -372,7 +373,7 @@
             // btnOKCambios
             // 
             btnOKCambios.Dock = DockStyle.Top;
-            btnOKCambios.FlatAppearance.MouseDownBackColor = Color.Lime;
+            btnOKCambios.FlatAppearance.MouseDownBackColor = Color.Green;
             btnOKCambios.FlatAppearance.MouseOverBackColor = Color.Lime;
             btnOKCambios.FlatStyle = FlatStyle.Flat;
             btnOKCambios.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -390,9 +391,10 @@
             label2.AutoSize = true;
             label2.Location = new Point(34, 143);
             label2.Name = "label2";
-            label2.Size = new Size(38, 15);
+            label2.Size = new Size(42, 15);
             label2.TabIndex = 0;
-            label2.Text = "label2";
+            label2.Text = "panel2";
+            label2.Visible = false;
             // 
             // panel3
             // 
@@ -427,8 +429,8 @@
             // btnNODelete
             // 
             btnNODelete.Dock = DockStyle.Right;
-            btnNODelete.FlatAppearance.MouseDownBackColor = Color.Red;
-            btnNODelete.FlatAppearance.MouseOverBackColor = Color.Red;
+            btnNODelete.FlatAppearance.MouseDownBackColor = Color.Green;
+            btnNODelete.FlatAppearance.MouseOverBackColor = Color.Lime;
             btnNODelete.FlatStyle = FlatStyle.Flat;
             btnNODelete.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btnNODelete.ForeColor = Color.White;
@@ -467,21 +469,22 @@
             label3.AutoSize = true;
             label3.Location = new Point(34, 28);
             label3.Name = "label3";
-            label3.Size = new Size(38, 15);
+            label3.Size = new Size(42, 15);
             label3.TabIndex = 0;
-            label3.Text = "label3";
+            label3.Text = "panel3";
+            label3.Visible = false;
             // 
-            // panel4
+            // panelSuperBottom
             // 
-            panel4.Dock = DockStyle.Bottom;
-            panel4.Location = new Point(0, 466);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(883, 34);
-            panel4.TabIndex = 28;
+            panelSuperBottom.Dock = DockStyle.Bottom;
+            panelSuperBottom.Location = new Point(0, 466);
+            panelSuperBottom.Name = "panelSuperBottom";
+            panelSuperBottom.Size = new Size(883, 34);
+            panelSuperBottom.TabIndex = 28;
             // 
             // button1
             // 
-            button1.FlatAppearance.MouseDownBackColor = Color.Red;
+            button1.FlatAppearance.MouseDownBackColor = Color.DarkRed;
             button1.FlatAppearance.MouseOverBackColor = Color.Red;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -496,8 +499,8 @@
             // 
             // button4
             // 
-            button4.FlatAppearance.MouseDownBackColor = Color.Lime;
-            button4.FlatAppearance.MouseOverBackColor = Color.Lime;
+            button4.FlatAppearance.MouseDownBackColor = Color.FromArgb(192, 64, 0);
+            button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 128, 0);
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             button4.ForeColor = Color.White;
@@ -511,7 +514,7 @@
             // 
             // button3
             // 
-            button3.FlatAppearance.MouseDownBackColor = Color.Red;
+            button3.FlatAppearance.MouseDownBackColor = Color.DarkRed;
             button3.FlatAppearance.MouseOverBackColor = Color.Red;
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -526,7 +529,7 @@
             // 
             // button2
             // 
-            button2.FlatAppearance.MouseDownBackColor = Color.Lime;
+            button2.FlatAppearance.MouseDownBackColor = Color.Green;
             button2.FlatAppearance.MouseOverBackColor = Color.Lime;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
@@ -575,7 +578,6 @@
             Name = "Viewdoc";
             Text = "Viewdoc";
             Load += Viewdoc_Load;
-            Shown += Viewdoc_Shown;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panelBottom.ResumeLayout(false);
@@ -599,7 +601,7 @@
         private Button button3;
         private Button button1;
         private Button button4;
-        private Panel panel4;
+        private Panel panelSuperBottom;
         private Panel panelBottom;
         private Panel panel2;
         private Label label14;

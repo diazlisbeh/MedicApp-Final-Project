@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,6 +29,7 @@ namespace Forms
         //Method to open formularies within the panel
         private void OpenFormulary<Myform>() where Myform : Form, new()
         {
+
             Form formulary;
             formulary = panel1.Controls.OfType<Myform>().FirstOrDefault();//Look in the formulary collection
             //if the formulary/instance does not exist
@@ -48,14 +50,15 @@ namespace Forms
                 formulary.BringToFront();
             }
         }
+
+        const int BottomY = 158;
+
         private void button2_Click(object sender, EventArgs e)
         {
             OpenFormulary<Form3>();
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panelBottom.Height = 1;
 
         }
 
@@ -64,17 +67,17 @@ namespace Forms
 
         }
 
-        private void Viewdoc_Load(object sender, EventArgs e)
+        private async void fillDataGrid()
         {
-
-
-        }
-
-        private async void Viewdoc_Shown(object sender, EventArgs e)
-        {
-
+            dataGridView1.DataSource = null;
             List<MedicosDto> listamedicos = await _service.GetMedicosWithSustituto();
             dataGridView1.DataSource = listamedicos;
+        }
+
+        private void Viewdoc_Load(object sender, EventArgs e)
+        {
+            fillDataGrid();
+            panelBottom.Height = 1;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -84,6 +87,7 @@ namespace Forms
 
         private void button4_Click(object sender, EventArgs e)
         {
+            panelBottom.Height = BottomY;
             panel3.Visible = false;
             panel2.Visible = true;
 
@@ -120,16 +124,21 @@ namespace Forms
             // La funcion de guardar va aqui!!
             int res = await _service.Update(doc.ID, doc);
             if (res == 1) MessageBox.Show("Se ha actualizado correctamente");
+            //else { MessageBox.Show("Ha ocurrido un error al intentar guardar"); }
             panel2.Visible = false;
+            panelBottom.Height = 1;
+            fillDataGrid();
         }
 
         private void btnNOCambios_Click(object sender, EventArgs e)
         {
             panel2.Visible = false;
+            panelBottom.Height = 1;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            panelBottom.Height = BottomY;
             panel2.Visible = false;
             panel3.Visible = true;
             labelDelID.Text = dataGridView1.CurrentRow.Cells["ID"].Value.ToString();
@@ -147,13 +156,19 @@ namespace Forms
             //  int res = await _service.DeleteMedico(int.Parse(labelDelID.Text));
 
             panel3.Visible = false;
+            panelBottom.Height = 1;
+            fillDataGrid();
         }
 
         private void btnNODelete_Click(object sender, EventArgs e)
         {
             panel3.Visible = false;
+            panelBottom.Height = 1;
         }
 
-
+        private void panel1_ControlAdded(object sender, ControlEventArgs e)
+        {
+            fillDataGrid();
+        }
     }
 }

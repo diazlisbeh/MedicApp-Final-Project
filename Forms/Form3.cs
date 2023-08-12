@@ -50,7 +50,7 @@ namespace Forms
             int result = await service.AddMedicos(doctor);
 
             if (result == 0) { MessageBox.Show("Ha ocurrido un Error."); }
-            else { MessageBox.Show("Se ha agregado el Medico exitosamente"); }
+            else { MessageBox.Show("Se ha agregado el Medico exitosamente"); this.Close(); }
         }
     }
 }
