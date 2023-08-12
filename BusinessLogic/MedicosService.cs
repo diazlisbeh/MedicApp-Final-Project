@@ -110,12 +110,6 @@ namespace BusinessLogic
             return medicosDto;
         }
 
-      /*  public async Task<MedicoItem> GetMedicoItem()
-        {
-            var medicos = await _context.medicos.ToListAsync();
-            MedicoItem medicoItem = (MedicoItem)medicos.Select((p) => new MedicoItem { Id = p.ID, Nombre = p.Nombre, });
-            return medicoItem;
-        }*/
 
         private bool EstaActivo(DateOnly inicio, DateOnly baja)
         {
