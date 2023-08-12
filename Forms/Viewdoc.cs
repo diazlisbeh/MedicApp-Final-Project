@@ -68,7 +68,7 @@ namespace Forms
         private async void Viewdoc_Shown(object sender, EventArgs e)
         {
             var medser = new MedicosService();
-            var listamedicos = await medser.GetMedicos();
+            List<MedicosDto> listamedicos = await medser.GetMedicosWithSustituto();
             dataGridView1.DataSource = listamedicos;
         }
 

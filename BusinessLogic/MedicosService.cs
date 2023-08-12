@@ -15,6 +15,18 @@ namespace BusinessLogic
             _context = context;
         }
 
+        public async Task<int> Update(int medicoId, Medico medico)
+        {
+            try
+            {
+                var medicoDB = await _context.medicos.FirstOrDefaultAsync(p => p.ID == medicoId);
+                if(medicoDB is null)  return 0;
+                medicoDB = medico;
+                await _context.SaveChangesAsync();
+                return 1;
+            }catch(Exception ex) { return 0; }
+        }
+
         public async Task<int> DeleteMedico(int medicoId)
         {
             try
@@ -57,8 +69,9 @@ namespace BusinessLogic
       
         public async Task<List<MedicosDto>> GetMedicosWithSustituto()
         {
-            var sustitutos = await _context.sustitutos.ToListAsync();
             var medicos = await _context.medicos.ToListAsync();
+            var sustitutos = await _context.sustitutos.ToListAsync();
+            
             
 
             var medicosDto = new List<MedicosDto>();
@@ -67,6 +80,7 @@ namespace BusinessLogic
             {
                 medicosDto.Add(new MedicosDto()
                 {
+                    ID = medico.ID,
                     Nombre = medico.Nombre,
                     Direccion = medico.Direccion,
                     Telefono = medico.Telefono,

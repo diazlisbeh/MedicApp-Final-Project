@@ -45,8 +45,8 @@ namespace BusinessLogic
             try
             {
                 await _context.AddAsync(paciente);
-            await _context.SaveChangesAsync();
-            return 1;
+                await _context.SaveChangesAsync();
+                return 1;
             }
             catch (Exception ex)
             {

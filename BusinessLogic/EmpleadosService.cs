@@ -51,6 +51,19 @@ namespace BusinessLogic
                 return 0;
             }
         }
+        public async Task<int> Update(int medicoId, Medico medico)
+        {
+            try
+            {
+                var medicoDB = await _context.medicos.FirstOrDefaultAsync(p => p.ID == medicoId);
+                if (medicoDB is null) return 0;
+                medicoDB = medico;
+                await _context.SaveChangesAsync();
+                return 1;
+            }
+            catch (Exception ex) { return 0; }
+        }
+
 
     }
 }
