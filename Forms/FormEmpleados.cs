@@ -40,7 +40,20 @@ namespace Forms
             empleado.Numero_de_seguridad_social = textBox8.Text;
             empleado.Tipo_empleado = selected.ID;
 
-            int result = await service.AddEmpleado(empleado);
+            bool validation = Utils.Validate(empleado);
+
+            if (validation)
+            {
+                int res = await service.AddEmpleado(empleado);
+
+                if (res == 1)
+                {
+                    MessageBox.Show("Se ha agregado el paciente correctamente");
+                    this.Close();
+                }
+                else { MessageBox.Show("Ha ocurrido un error al guardar los datos"); }
+
+            }
 
 
         }

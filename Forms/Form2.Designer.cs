@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            numericUpDown2 = new NumericUpDown();
+            numericUpDown1 = new NumericUpDown();
             comboBox1 = new ComboBox();
             button3 = new Button();
             button2 = new Button();
@@ -44,11 +46,9 @@
             label2 = new Label();
             textBox1 = new TextBox();
             label1 = new Label();
-            numericUpDown1 = new NumericUpDown();
-            numericUpDown2 = new NumericUpDown();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -77,8 +77,23 @@
             panel1.Size = new Size(883, 500);
             panel1.TabIndex = 0;
             // 
+            // numericUpDown2
+            // 
+            numericUpDown2.Location = new Point(362, 168);
+            numericUpDown2.Name = "numericUpDown2";
+            numericUpDown2.Size = new Size(120, 23);
+            numericUpDown2.TabIndex = 25;
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(362, 76);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(120, 23);
+            numericUpDown1.TabIndex = 1;
+            // 
             // comboBox1
             // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox1.FormattingEnabled = true;
             comboBox1.Location = new Point(697, 76);
             comboBox1.Name = "comboBox1";
@@ -233,20 +248,6 @@
             label1.TabIndex = 0;
             label1.Text = "REGISTRO DE PACIENTES";
             // 
-            // numericUpDown1
-            // 
-            numericUpDown1.Location = new Point(362, 76);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(120, 23);
-            numericUpDown1.TabIndex = 1;
-            // 
-            // numericUpDown2
-            // 
-            numericUpDown2.Location = new Point(362, 168);
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(120, 23);
-            numericUpDown2.TabIndex = 25;
-            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -258,8 +259,8 @@
             Load += Form2_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             ResumeLayout(false);
         }
 

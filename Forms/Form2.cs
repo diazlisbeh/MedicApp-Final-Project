@@ -45,12 +45,20 @@ namespace Forms
             paciente.Numero_de_seguridad_social = textBox6.Text;
             paciente.Medico_ID = selected.ID;
 
-            int result = await service.AddPaciente(paciente);
+            bool validation = Utils.Validate(paciente);
 
-            if (result == 1) { MessageBox.Show("Se ha agregado el paciente correctamente"); }
-            else { MessageBox.Show("Ha ocurrido un error"); }
+            if (validation)
+            {
+                int result = await service.AddPaciente(paciente);
 
-            this.Close();
+                if (result == 1)
+                {
+                    MessageBox.Show("Se ha agregado el paciente correctamente");
+                    this.Close();
+                }
+                else { MessageBox.Show("Ha ocurrido un error al guardar los datos"); }
+
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)

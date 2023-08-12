@@ -47,10 +47,20 @@ namespace Forms
             doctor.Numero_de_colegiado = textBox10.Text;
             doctor.Numero_de_seguridad_social = textBox11.Text;
 
-            int result = await service.AddMedicos(doctor);
+            bool valitation = Utils.Validate(doctor);
 
-            if (result == 0) { MessageBox.Show("Ha ocurrido un Error."); }
-            else { MessageBox.Show("Se ha agregado el Medico exitosamente"); this.Close(); }
+            if (valitation)
+            {
+                int result = await service.AddMedicos(doctor);
+
+                if (result == 1)
+                {
+                    MessageBox.Show("Se ha agregado el paciente correctamente");
+                    this.Close();
+                }
+                else { MessageBox.Show("Ha ocurrido un error al guardar los datos"); }
+
+            }
         }
     }
 }

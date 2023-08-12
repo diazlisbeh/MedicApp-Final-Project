@@ -12,16 +12,22 @@ namespace DataAccess
     public class Medico
     {
         public int ID { get; set; }
-        [MaxLength(10,ErrorMessage ="El nombre no debe tener mas de 10 caracteres")]
+        [Required]
+        [MaxLength(10,ErrorMessage ="El nombre debe tener menos de 10 caracteres")]
         public string? Nombre { get; set; }
+
+        [MaxLength(30, ErrorMessage = "La direccion debe tener menos de 30 caracteres")]
         public string? Direccion { get; set; }
+        [RegularExpression(@"^(809|829|849)-\d{3}-\d{4}$", ErrorMessage = "Formato de telefono invalido")]
         public string? Telefono { get; set; }
         public string? Poblacion { get; set; }
         public string? Provincia { get; set; }
+        [MaxLength(6, ErrorMessage = "El codigo postal debe contener menos de 6 caracteres")]
         public int Codigo_Postal { get; set; }
         public int NIF { get; set; } 
         public string? Numero_de_seguridad_social { get; set; }
         public string? Numero_de_colegiado { get; set; }
+        
         public string? Tipo { get; set; }
         public bool IsDeleted { get; set; }
         public DateTime? DeletedDateTime { get; set; }

@@ -132,8 +132,22 @@ namespace Forms
             paci.Medico_ID = selectedMed.ID;
 
             // Guardar cambios
-            int res = await _service.Update(paci.ID, paci);
-            if (res == 1) MessageBox.Show("Se ha actualizado correctamente");
+            bool validation = Utils.Validate(paci);
+
+            if (validation)
+            {
+                int res = await _service.Update(paci.ID, paci);
+
+                if (res == 1)
+                {
+                    MessageBox.Show("Se ha agregado el paciente correctamente");
+                    this.Close();
+                }
+                else { MessageBox.Show("Ha ocurrido un error al guardar los datos"); }
+
+            }
+           
+           
             //else { MessageBox.Show("Ha ocurrido un error al intentar guardar"); }
             panel2.Visible = false;
             panelBottom.Height = 1;
@@ -178,6 +192,11 @@ namespace Forms
         private void panel1_ControlAdded(object sender, ControlEventArgs e)
         {
             fillDataGrid();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
